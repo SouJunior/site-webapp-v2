@@ -20,6 +20,7 @@ const Card: React.FC<CardProps> = ({
   titleAs = "h2",
   titleSize,
   marginTop,
+  textAlign,
 
   subtitle,
 
@@ -30,6 +31,7 @@ const Card: React.FC<CardProps> = ({
   descriptionWeight,
   descriptionWidth,
   descriptionBlockMargin,
+  descriptionAlign,
 
   list,
   listSize,
@@ -45,7 +47,7 @@ const Card: React.FC<CardProps> = ({
       {imageSrc && <Image src={imageSrc} alt={title ?? ""} role="img" />}
 
       <div>
-        <Title as={titleAs} size={titleSize} marginTop={marginTop}>
+        <Title as={titleAs} size={titleSize} marginTop={marginTop} textAlign={textAlign}>
           {title}
         </Title>
 
@@ -58,6 +60,7 @@ const Card: React.FC<CardProps> = ({
             color={descriptionColor}
             weight={descriptionWeight}
             marginBlock={descriptionBlockMargin}
+            textAlign={descriptionAlign}
           >
             {description}
           </Text>

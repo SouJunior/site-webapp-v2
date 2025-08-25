@@ -28,4 +28,5 @@ export interface CardProps {
   buttonText?: string;
   buttonVariant?: 'primary' | 'secondary' | 'tertiary';
   onClick?: () => void;
+  descriptionAlign?: "left" | "center" | "right" | "justify";
 }

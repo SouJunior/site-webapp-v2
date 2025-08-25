@@ -9,4 +9,5 @@ export interface TextProps {
   lineHeight?: number;
   margin?: number;  
   marginBlock?: number;
+  textAlign?: "left" | "center" | "right" | "justify";
 }

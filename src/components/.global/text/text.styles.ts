@@ -11,4 +11,5 @@ export const TextContainer = styled.p<TextProps>`
   color: ${({color = '#323232'}) => color };
   margin: 0 auto;
   margin-block: ${({ marginBlock = 16 }) => pxToRem(marginBlock)};
+  text-align: ${({ textAlign = "left" }) => textAlign};
 `;
