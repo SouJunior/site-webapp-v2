@@ -1,15 +1,15 @@
-import React, { useEffect } from "react";
+import React, { useEffect } from 'react';
 import {
   useScreenReaderAnnouncer,
   useFocusManagement,
-} from "../../../hooks/useAccessibility";
-import Subtitle from "../../../components/.global/subtitle";
-import Text from "../../../components/.global/text";
-import Title from "../../../components/.global/title";
-import ImageDesign from "../../../assets/image-design.png";
-import ImageDesign2 from "../../../assets/Image-design2.png";
-import Card from "../../../components/card";
-import Button from "../../../components/.global/button";
+} from '../../../hooks/useAccessibility';
+import Subtitle from '../../../components/.global/subtitle';
+import Text from '../../../components/.global/text';
+import Title from '../../../components/.global/title';
+import ImageDesign from '../../../assets/image-design.png';
+import ImageDesign2 from '../../../assets/Image-design2.png';
+import Card from '../../../components/card';
+import Button from '../../../components/.global/button';
 
 const ProductView: React.FC = () => {
   const { announce } = useScreenReaderAnnouncer();
@@ -17,19 +17,19 @@ const ProductView: React.FC = () => {
 
   // Set page title for screen readers
   useEffect(() => {
-    document.title = "Design System - Sou Junior";
+    document.title = 'Design System - Sou Junior';
 
     // Add meta description if not present
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute(
-        "content",
-        "Sistema de design da Sou Junior com componentes e diretrizes visuais"
+        'content',
+        'Sistema de design da Sou Junior com componentes e diretrizes visuais',
       );
     }
 
     // Announce page change to screen readers
-    announce("Página de Design System carregada");
+    announce('Página de Design System carregada');
 
     // Focus main content for better navigation
     setTimeout(() => {
@@ -52,7 +52,7 @@ const ProductView: React.FC = () => {
 
           <Text size={20} color="#323232" weight={400}>
             A área de Produto é o coração estratégico de muitos times. São
-            analisados problemas reais, organização de  ideias, validação de 
+            analisados problemas reais, organização de ideias, validação de
             hipóteses e acompanha a criação de soluções que geram valor para
             quem as usa.
           </Text>
@@ -95,10 +95,10 @@ const ProductView: React.FC = () => {
           descriptionWeight={400}
           descriptionWidth={500}
           list={[
-            "Ajudar na priorização de tarefas e demandas.",
-            "Participar de rituais com o time (como plannings e reviews).",
-            "Apoiar em pesquisas com usuários.",
-            "Aprender a trabalhar com OKRs, MVPs, e Product Discovery",
+            'Ajudar na priorização de tarefas e demandas.',
+            'Participar de rituais com o time (como plannings e reviews).',
+            'Apoiar em pesquisas com usuários.',
+            'Aprender a trabalhar com OKRs, MVPs, e Product Discovery',
           ]}
           listSize={16}
           listColor="#000000"
@@ -110,11 +110,11 @@ const ProductView: React.FC = () => {
         marginBlock="2rem"
         title="Por que atuar em Produto na SouJunior?"
         list={[
-          "Aprenda na prática com pessoas de diferentes áreas.",
-          "Participe de entregas reais com impacto no projeto.",
-          "Desenvolva habilidades valorizadas no mercado.",
-          "Descubra qual frente de Produto mais combina com você.",
-          "Construa um portfólio e fortalecer seu LinkedIn com experiência real.",
+          'Aprenda na prática com pessoas de diferentes áreas.',
+          'Participe de entregas reais com impacto no projeto.',
+          'Desenvolva habilidades valorizadas no mercado.',
+          'Descubra qual frente de Produto mais combina com você.',
+          'Construa um portfólio e fortalecer seu LinkedIn com experiência real.',
         ]}
         listSize={20}
         listColor="#323232"
@@ -122,7 +122,7 @@ const ProductView: React.FC = () => {
         lineHeight="140%"
       />
 
-      <div style={{ margin: "auto", textAlign: "center" }}>
+      <div style={{ margin: 'auto', textAlign: 'center' }}>
         <Card
           title="Junte-se a nós e faça parte dessa jornada transformadora!"
           description="Sua contribuição pode ser um passo importante para impulsionar

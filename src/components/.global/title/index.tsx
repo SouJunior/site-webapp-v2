@@ -1,12 +1,8 @@
 import React from 'react';
 import { TitleContainer } from './title.styles';
-import { TitleProps } from './types';
+import type { TitleProps } from './types';
 
-const Title: React.FC<TitleProps> = ({
-  children,
-  as = 'h1',
-  ...props
-}) => {
+const Title: React.FC<TitleProps> = ({ children, as = 'h1', ...props }) => {
   return (
     <TitleContainer as={as} {...props}>
       {children}

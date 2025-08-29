@@ -1,35 +1,35 @@
-import React, { useEffect } from "react";
+import React, { useEffect } from 'react';
 import {
   useScreenReaderAnnouncer,
   useFocusManagement,
-} from "../../../hooks/useAccessibility";
-import Subtitle from "../../../components/.global/subtitle";
-import Text from "../../../components/.global/text";
-import Title from "../../../components/.global/title";
-import ImageDesign from "../../../assets/image-design.png";
-import Card from "../../../components/card";
-import Button from "../../../components/.global/button";
-import communication from "../../../assets/skills/tech-recruiter/communication.svg";
-import listening from "../../../assets/skills/tech-recruiter/listening.svg";
-import organization from "../../../assets/skills/tech-recruiter/organization.svg";
-import watchfulEye from "../../../assets/skills/tech-recruiter/watchful-eye.svg";
+} from '../../../hooks/useAccessibility';
+import Subtitle from '../../../components/.global/subtitle';
+import Text from '../../../components/.global/text';
+import Title from '../../../components/.global/title';
+import ImageDesign from '../../../assets/image-design.png';
+import Card from '../../../components/card';
+import Button from '../../../components/.global/button';
+import communication from '../../../assets/skills/tech-recruiter/communication.svg';
+import listening from '../../../assets/skills/tech-recruiter/listening.svg';
+import organization from '../../../assets/skills/tech-recruiter/organization.svg';
+import watchfulEye from '../../../assets/skills/tech-recruiter/watchful-eye.svg';
 
 const skillList = [
   {
     image: communication,
-    skill: "Comunicação clara",
+    skill: 'Comunicação clara',
   },
   {
     image: listening,
-    skill: "Escuta ativa.",
+    skill: 'Escuta ativa.',
   },
   {
     image: organization,
-    skill: "Organização de processos.",
+    skill: 'Organização de processos.',
   },
   {
     image: watchfulEye,
-    skill: "Olhar atento para diversidade e inclusão.",
+    skill: 'Olhar atento para diversidade e inclusão.',
   },
 ];
 
@@ -39,19 +39,19 @@ const TechRecruiterView: React.FC = () => {
 
   // Set page title for screen readers
   useEffect(() => {
-    document.title = "Design System - Sou Junior";
+    document.title = 'Design System - Sou Junior';
 
     // Add meta description if not present
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute(
-        "content",
-        "Sistema de design da Sou Junior com componentes e diretrizes visuais"
+        'content',
+        'Sistema de design da Sou Junior com componentes e diretrizes visuais',
       );
     }
 
     // Announce page change to screen readers
-    announce("Página de Design System carregada");
+    announce('Página de Design System carregada');
 
     // Focus main content for better navigation
     setTimeout(() => {
@@ -95,7 +95,7 @@ const TechRecruiterView: React.FC = () => {
         <img src={ImageDesign} alt="" />
       </main>
 
-      <section style={{ marginBlock: "4rem 5rem" }}>
+      <section style={{ marginBlock: '4rem 5rem' }}>
         <Title as="h2" textAlign="center" size={32} width={568}>
           Como funciona o processo seletivo?
         </Title>
@@ -109,11 +109,11 @@ const TechRecruiterView: React.FC = () => {
           descriptionColor="#000000"
           descriptionWeight={400}
           list={[
-            "Análise de inscrições.",
-            "Conversa inicial (bate-papo para conhecer a pessoa).",
-            "Conversa com o líder da área.",
-            "Alinhamento de expectativas e cultura do projeto.",
-            "Feedback final (positivo ou negativo).",
+            'Análise de inscrições.',
+            'Conversa inicial (bate-papo para conhecer a pessoa).',
+            'Conversa com o líder da área.',
+            'Alinhamento de expectativas e cultura do projeto.',
+            'Feedback final (positivo ou negativo).',
           ]}
           listSize={16}
           listColor="#000000"
@@ -121,7 +121,7 @@ const TechRecruiterView: React.FC = () => {
         />
       </section>
 
-      <section style={{ textAlign: "center" }}>
+      <section style={{ textAlign: 'center' }}>
         <Title textAlign="center" size={32} width={708}>
           O papel do Tech Recruiter é garantir que tudo isso aconteça com
           clareza e empatia
@@ -130,14 +130,20 @@ const TechRecruiterView: React.FC = () => {
           Além disso, vai desenvolver habilidades como:
         </Text>
 
-        <div style={{ display: "flex", justifyContent: "center", marginBlock: "4rem" }}>
+        <div
+          style={{
+            display: 'flex',
+            justifyContent: 'center',
+            marginBlock: '4rem',
+          }}
+        >
           {skillList.map(({ skill, image }) => (
             <Card
               key={skill}
               edgeSection
               flexDirection="column"
-              justifyContent='flex-start'
-              marginInline='0.6rem'
+              justifyContent="flex-start"
+              marginInline="0.6rem"
               padding="20px"
               width={191}
               height={218}
@@ -159,11 +165,11 @@ const TechRecruiterView: React.FC = () => {
         marginBlock="2rem"
         title="Por que ser Tech Recruiter na SouJunior?"
         list={[
-          "Experiência prática para o currículo.",
-          "Desenvolvimento de soft skills.",
-          "Desenvolva habilidades valorizadas no mercado.",
-          "Contato direto com outras áreas.",
-          "Apoio de mentores e uma rede de voluntários.",
+          'Experiência prática para o currículo.',
+          'Desenvolvimento de soft skills.',
+          'Desenvolva habilidades valorizadas no mercado.',
+          'Contato direto com outras áreas.',
+          'Apoio de mentores e uma rede de voluntários.',
         ]}
         listSize={16}
         listColor="#323232"
@@ -171,7 +177,7 @@ const TechRecruiterView: React.FC = () => {
         lineHeight="140%"
       />
 
-      <div style={{ margin: "auto", textAlign: "center" }}>
+      <div style={{ margin: 'auto', textAlign: 'center' }}>
         <Card
           title="Junte-se a nós e faça parte dessa jornada transformadora!"
           description="Sua contribuição pode ser um passo importante para impulsionar

@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef } from 'react';
 
 /**
  * Hook para anúncios de screen reader
@@ -10,11 +10,11 @@ export const useScreenReaderAnnouncer = () => {
   useEffect(() => {
     // Criar live region se não existir
     if (!liveRegionRef.current) {
-      const liveRegion = document.createElement("div");
-      liveRegion.setAttribute("aria-live", "polite");
-      liveRegion.setAttribute("aria-atomic", "true");
-      liveRegion.className = "sr-only";
-      liveRegion.id = "screen-reader-announcer";
+      const liveRegion = document.createElement('div');
+      liveRegion.setAttribute('aria-live', 'polite');
+      liveRegion.setAttribute('aria-atomic', 'true');
+      liveRegion.className = 'sr-only';
+      liveRegion.id = 'screen-reader-announcer';
       document.body.appendChild(liveRegion);
       liveRegionRef.current = liveRegion;
     }
@@ -32,16 +32,16 @@ export const useScreenReaderAnnouncer = () => {
 
   const announce = (
     message: string,
-    priority: "polite" | "assertive" = "polite"
+    priority: 'polite' | 'assertive' = 'polite',
   ) => {
     if (liveRegionRef.current) {
-      liveRegionRef.current.setAttribute("aria-live", priority);
+      liveRegionRef.current.setAttribute('aria-live', priority);
       liveRegionRef.current.textContent = message;
 
       // Limpar mensagem após um tempo para evitar repetições
       setTimeout(() => {
         if (liveRegionRef.current) {
-          liveRegionRef.current.textContent = "";
+          liveRegionRef.current.textContent = '';
         }
       }, 1000);
     }
@@ -57,10 +57,10 @@ export const useScreenReaderAnnouncer = () => {
 export const useFocusManagement = () => {
   const focusElement = (
     selector: string | HTMLElement,
-    options?: FocusOptions
+    options?: FocusOptions,
   ) => {
     const element =
-      typeof selector === "string"
+      typeof selector === 'string'
         ? document.querySelector(selector)
         : selector;
 
@@ -76,7 +76,7 @@ export const useFocusManagement = () => {
 
   const focusFirstError = () => {
     const firstError = document.querySelector(
-      '[aria-invalid="true"]'
+      '[aria-invalid="true"]',
     ) as HTMLElement;
     if (firstError) {
       focusElement(firstError);
@@ -86,7 +86,7 @@ export const useFocusManagement = () => {
   };
 
   const focusMainContent = () => {
-    focusElement("#main-content");
+    focusElement('#main-content');
   };
 
   return {
@@ -105,16 +105,16 @@ export const useAssistiveTechnology = () => {
     return !!(
       window.speechSynthesis ||
       navigator.userAgent.match(/NVDA|JAWS|VoiceOver|TalkBack|ChromeVox/i) ||
-      document.querySelector("[aria-live]")
+      document.querySelector('[aria-live]')
     );
   };
 
   const prefersReducedMotion = () => {
-    return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   };
 
   const prefersHighContrast = () => {
-    return window.matchMedia("(prefers-contrast: high)").matches;
+    return window.matchMedia('(prefers-contrast: high)').matches;
   };
 
   return {

@@ -1,5 +1,6 @@
-import React, { Component, ErrorInfo, ReactNode } from "react";
-import styled from "styled-components";
+import type { ErrorInfo, ReactNode } from 'react';
+import React, { Component } from 'react';
+import styled from 'styled-components';
 
 interface Props {
   children: ReactNode;
@@ -85,15 +86,15 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error("ErrorBoundary caught an error:", error, errorInfo);
+    console.error('ErrorBoundary caught an error:', error, errorInfo);
 
     // Announce error to screen readers
-    const announcement = document.createElement("div");
-    announcement.setAttribute("aria-live", "assertive");
-    announcement.setAttribute("role", "alert");
-    announcement.className = "sr-only";
+    const announcement = document.createElement('div');
+    announcement.setAttribute('aria-live', 'assertive');
+    announcement.setAttribute('role', 'alert');
+    announcement.className = 'sr-only';
     announcement.textContent =
-      "Ocorreu um erro na aplicação. Por favor, tente novamente.";
+      'Ocorreu um erro na aplicação. Por favor, tente novamente.';
     document.body.appendChild(announcement);
 
     setTimeout(() => {

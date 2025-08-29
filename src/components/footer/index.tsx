@@ -1,5 +1,5 @@
-import React from "react";
-import { FooterProps } from "./types";
+import React from 'react';
+import type { FooterProps } from './types';
 import {
   FooterContainer,
   Nav,
@@ -8,10 +8,10 @@ import {
   Logo,
   Hr,
   NavContainer,
-} from "./footer.styles";
-import Link from "../.global/link";
-import Image from "../.global/image";
-import logoImage from "../../assets/sj-logo-footer.png";
+} from './footer.styles';
+import Link from '../.global/link';
+import Image from '../.global/image';
+import logoImage from '../../assets/sj-logo-footer.png';
 
 const Footer: React.FC<FooterProps> = ({
   links,
@@ -22,10 +22,10 @@ const Footer: React.FC<FooterProps> = ({
 }) => (
   <div
     style={{
-      backgroundColor: "#001633",
-      display: "flex",
-      justifyContent: "center",
-      marginTop: "2.5rem",
+      backgroundColor: '#001633',
+      display: 'flex',
+      justifyContent: 'center',
+      marginTop: '2.5rem',
     }}
   >
     <FooterContainer>
@@ -37,7 +37,7 @@ const Footer: React.FC<FooterProps> = ({
         />
       </Logo>
       <NavContainer>
-        <div style={{ display: "flex", gap: "3rem", marginBottom: "2.5rem" }}>
+        <div style={{ display: 'flex', gap: '3rem', marginBottom: '2.5rem' }}>
           <Nav>
             {links.map((link, index) => {
               const isFirst = index === 0;
@@ -45,7 +45,7 @@ const Footer: React.FC<FooterProps> = ({
                 <Link
                   key={link.label}
                   to={link.to}
-                  color='#fff'
+                  color="#fff"
                   size={index === 0 ? 20 : 16}
                   isFistLink={isFirst}
                 >
@@ -62,7 +62,7 @@ const Footer: React.FC<FooterProps> = ({
                   <Link
                     key={link.label}
                     to={link.to}
-                    color='#fff'
+                    color="#fff"
                     size={index === 0 ? 20 : 16}
                     isFistLink={isFirst}
                   >
@@ -79,7 +79,7 @@ const Footer: React.FC<FooterProps> = ({
                   <Link
                     key={link.label}
                     to={link.to}
-                    color='#fff'
+                    color="#fff"
                     size={index === 0 ? 20 : 16}
                     isFistLink={isFirst}
                   >

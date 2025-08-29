@@ -1,5 +1,5 @@
-import React from "react";
-import TechRecruiterView from "../view/index.view";
+import React from 'react';
+import TechRecruiterView from '../view/index.view';
 
 const TechRecruiterController: React.FC = () => {
   return <TechRecruiterView />;

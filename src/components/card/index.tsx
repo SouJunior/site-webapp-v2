@@ -1,11 +1,11 @@
-import Subtitle from "../.global/subtitle";
-import Title from "../.global/title";
-import { CardContainer } from "./card.styles";
-import { CardProps } from "./types";
-import Image from "../.global/image";
-import Text from "../.global/text";
-import List from "../.global/list";
-import Button from "../.global/button";
+import Subtitle from '../.global/subtitle';
+import Title from '../.global/title';
+import { CardContainer } from './card.styles';
+import type { CardProps } from './types';
+import Image from '../.global/image';
+import Text from '../.global/text';
+import List from '../.global/list';
+import Button from '../.global/button';
 
 const Card: React.FC<CardProps> = ({
   edgeSection,
@@ -25,7 +25,7 @@ const Card: React.FC<CardProps> = ({
   imageHeight,
 
   title,
-  titleAs = "h2",
+  titleAs = 'h2',
   titleSize,
   titleWidth,
   titleTextAlign,
@@ -52,11 +52,37 @@ const Card: React.FC<CardProps> = ({
   buttonVariant,
 }) => {
   return (
-    <CardContainer edgeSection={edgeSection} flexDirection={flexDirection} justifyContent={justifyContent} marginBlock={marginBlock} marginInline={marginInline} padding={padding} width={width} height={height} border={border} backgroundColor={backgroundColor}>
-      {imageSrc && <Image src={imageSrc} width={imageWidth} height={imageHeight} alt={title ?? ""} role="img" />}
+    <CardContainer
+      edgeSection={edgeSection}
+      flexDirection={flexDirection}
+      justifyContent={justifyContent}
+      marginBlock={marginBlock}
+      marginInline={marginInline}
+      padding={padding}
+      width={width}
+      height={height}
+      border={border}
+      backgroundColor={backgroundColor}
+    >
+      {imageSrc && (
+        <Image
+          src={imageSrc}
+          width={imageWidth}
+          height={imageHeight}
+          alt={title ?? ''}
+          role="img"
+        />
+      )}
 
       <div>
-        <Title as={titleAs} size={titleSize} width={titleWidth} marginTop={titleMarginTop} color={titleColor} textAlign={titleTextAlign}>
+        <Title
+          as={titleAs}
+          size={titleSize}
+          width={titleWidth}
+          marginTop={titleMarginTop}
+          color={titleColor}
+          textAlign={titleTextAlign}
+        >
           {title}
         </Title>
 

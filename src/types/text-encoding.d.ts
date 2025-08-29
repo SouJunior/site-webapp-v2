@@ -1,4 +1,4 @@
-declare module "text-encoding" {
+declare module 'text-encoding' {
   export class TextEncoder {
     encode(input?: string): Uint8Array;
   }
@@ -6,7 +6,7 @@ declare module "text-encoding" {
   export class TextDecoder {
     constructor(
       label?: string,
-      options?: { fatal?: boolean; ignoreBOM?: boolean }
+      options?: { fatal?: boolean; ignoreBOM?: boolean },
     );
     decode(input?: ArrayBuffer | ArrayBufferView): string;
   }

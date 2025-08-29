@@ -9,4 +9,4 @@ export const colorPalette = {
   lightColor: '#f8f9fa',
   darkColor: '#343a40',
   neutralColor: '#666666',
-}
+};

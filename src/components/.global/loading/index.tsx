@@ -1,8 +1,8 @@
-import React from "react";
-import styled, { keyframes } from "styled-components";
+import React from 'react';
+import styled, { keyframes } from 'styled-components';
 
 interface LoadingProps {
-  size?: "small" | "medium" | "large";
+  size?: 'small' | 'medium' | 'large';
   text?: string;
   ariaLabel?: string;
 }
@@ -20,15 +20,15 @@ const LoadingContainer = styled.div<{ size: string }>`
   gap: 1rem;
   padding: 1rem;
 
-  ${props =>
-    props.size === "small" &&
+  ${(props) =>
+    props.size === 'small' &&
     `
     gap: 0.5rem;
     padding: 0.5rem;
   `}
 
-  ${props =>
-    props.size === "large" &&
+  ${(props) =>
+    props.size === 'large' &&
     `
     gap: 1.5rem;
     padding: 1.5rem;
@@ -41,23 +41,23 @@ const Spinner = styled.div<{ size: string }>`
   border-radius: 50%;
   animation: ${spin} 1s linear infinite;
 
-  ${props =>
-    props.size === "small" &&
+  ${(props) =>
+    props.size === 'small' &&
     `
     width: 20px;
     height: 20px;
     border-width: 2px;
   `}
 
-  ${props =>
-    props.size === "medium" &&
+  ${(props) =>
+    props.size === 'medium' &&
     `
     width: 40px;
     height: 40px;
   `}
   
-  ${props =>
-    props.size === "large" &&
+  ${(props) =>
+    props.size === 'large' &&
     `
     width: 60px;
     height: 60px;
@@ -83,28 +83,28 @@ const LoadingText = styled.p<{ size: string }>`
   color: var(--secondary-color, #6c757d);
   font-weight: 500;
 
-  ${props =>
-    props.size === "small" &&
+  ${(props) =>
+    props.size === 'small' &&
     `
     font-size: 0.875rem;
   `}
 
-  ${props =>
-    props.size === "medium" &&
+  ${(props) =>
+    props.size === 'medium' &&
     `
     font-size: 1rem;
   `}
   
-  ${props =>
-    props.size === "large" &&
+  ${(props) =>
+    props.size === 'large' &&
     `
     font-size: 1.125rem;
   `}
 `;
 
 const Loading: React.FC<LoadingProps> = ({
-  size = "medium",
-  text = "Carregando...",
+  size = 'medium',
+  text = 'Carregando...',
   ariaLabel,
 }) => {
   return (

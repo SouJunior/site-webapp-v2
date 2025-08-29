@@ -1,9 +1,9 @@
-import { Outlet } from "react-router-dom";
-import Footer from "../components/footer";
-import Header from "../components/header";
-import { useNavigate } from "react-router-dom";
-import { createHeaderLinks } from "../utils/headerLinks";
-import { footerLinks, footerLinks2, footerLinks3 } from "../utils/footerLinks";
+import { Outlet } from 'react-router-dom';
+import Footer from '../components/footer';
+import Header from '../components/header';
+import { useNavigate } from 'react-router-dom';
+import { createHeaderLinks } from '../utils/headerLinks';
+import { footerLinks, footerLinks2, footerLinks3 } from '../utils/footerLinks';
 
 function DefaultLayout() {
   const navigate = useNavigate();

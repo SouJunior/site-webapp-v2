@@ -1,15 +1,15 @@
-import React, { useEffect } from "react";
+import React, { useEffect } from 'react';
 import {
   useScreenReaderAnnouncer,
   useFocusManagement,
-} from "../../../hooks/useAccessibility";
-import Subtitle from "../../../components/.global/subtitle";
-import Text from "../../../components/.global/text";
-import Title from "../../../components/.global/title";
-import ImageDesign from "../../../assets/image-design.png";
-import ImageDesign2 from "../../../assets/Image-design2.png";
-import Card from "../../../components/card";
-import Button from "../../../components/.global/button";
+} from '../../../hooks/useAccessibility';
+import Subtitle from '../../../components/.global/subtitle';
+import Text from '../../../components/.global/text';
+import Title from '../../../components/.global/title';
+import ImageDesign from '../../../assets/image-design.png';
+import ImageDesign2 from '../../../assets/Image-design2.png';
+import Card from '../../../components/card';
+import Button from '../../../components/.global/button';
 
 const DesignView: React.FC = () => {
   const { announce } = useScreenReaderAnnouncer();
@@ -21,13 +21,13 @@ const DesignView: React.FC = () => {
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute(
-        "content",
-        "Sistema de design da Sou Junior com componentes e diretrizes visuais"
+        'content',
+        'Sistema de design da Sou Junior com componentes e diretrizes visuais',
       );
     }
 
     // Announce page change to screen readers
-    announce("Página de Design System carregada");
+    announce('Página de Design System carregada');
 
     // Focus main content for better navigation
     setTimeout(() => {
@@ -105,10 +105,10 @@ const DesignView: React.FC = () => {
           descriptionWeight={400}
           descriptionWidth={500}
           list={[
-            "Criar fluxos e mapas de navegação.",
-            "Fazer entrevistas e testes de usabilidade (junto da pesquisa).",
-            "Prototipar soluções de forma iterativa.",
-            "Garantir acessibilidade e clareza na experiência.",
+            'Criar fluxos e mapas de navegação.',
+            'Fazer entrevistas e testes de usabilidade (junto da pesquisa).',
+            'Prototipar soluções de forma iterativa.',
+            'Garantir acessibilidade e clareza na experiência.',
           ]}
           listSize={16}
           listColor="#000000"
@@ -120,10 +120,10 @@ const DesignView: React.FC = () => {
         marginBlock="2rem"
         title="Por que atuar com Design na SouJunior?"
         list={[
-          "Participar de entregas de verdade, com contexto e propósito.",
-          "Trabalhar com pessoas de Produto, Tech, Marketing e Pesquisa.",
-          "Desenvolver seu portfólio com segurança e acompanhamento.",
-          "Aprender a colaborar, iterar e defender ideias com base em dados.",
+          'Participar de entregas de verdade, com contexto e propósito.',
+          'Trabalhar com pessoas de Produto, Tech, Marketing e Pesquisa.',
+          'Desenvolver seu portfólio com segurança e acompanhamento.',
+          'Aprender a colaborar, iterar e defender ideias com base em dados.',
         ]}
         listSize={20}
         listColor="#323232"
@@ -131,7 +131,7 @@ const DesignView: React.FC = () => {
         lineHeight="140%"
       />
 
-      <div style={{ margin: "auto", textAlign: "center" }}>
+      <div style={{ margin: 'auto', textAlign: 'center' }}>
         <Card
           title="Junte-se a nós e faça parte dessa jornada transformadora!"
           description="Sua contribuição pode ser um passo importante para impulsionar
