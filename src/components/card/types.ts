@@ -31,6 +31,10 @@ export interface CardProps {
   descriptionWeight?: number;
   descriptionWidth?: number;
   descriptionBlockMargin?: number;
+  titleList?: string;
+  titleListSize?: number;
+  titleListAlign?: 'left' | 'center' | 'right' | 'justify';
+  titleListWeight?: number;
   list?: string[];
   listSize?: number;
   listColor?: string;

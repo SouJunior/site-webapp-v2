@@ -11,10 +11,10 @@ import IconPage from "../../../assets/icon-page.png";
 import IconPuzzle from "../../../assets/icon-puzzle.png";
 
 const carouselItems = [
-  { id: 1, description: "Facilitação de runiões", icon: IconChat },
-  { id: 2, description: "Organização e visão sistêmica", icon: IconEar },
-  { id: 3, description: "Comunicação não-violenta", icon: IconPage },
-  { id: 3, description: "Liderança e falicitação", icon: IconPuzzle }
+  { id: 1, title: "Facilitação de runiões.", icon: IconChat },
+  { id: 2, title: "Organização e visão sistêmica.", icon: IconEar },
+  { id: 3, title: "Comunicação não-violenta.", icon: IconPage },
+  { id: 4, title: "Liderança e falicitação.", icon: IconPuzzle }
 ];
 
 const AgilityView = () => {
@@ -27,11 +27,11 @@ const AgilityView = () => {
             role="main"
             aria-label="Conteúdo principal da página de agilidade"
         >
-            <section aria-labelledby="design-heading">
+            <section aria-labelledby="agility-heading">
             <Subtitle marginBottom={36} marginTop={16}>
                 Áreas de Atuação
             </Subtitle>
-            <Title size={40}>Agilidade</Title>
+            <Title id="agility-heading" size={40}>Agilidade</Title>
 
             <Text size={20} color="#323232" weight={400}>
             A área de Agilidade é responsável por garantir que os times consigam trabalhar de 
@@ -109,7 +109,7 @@ const AgilityView = () => {
             descriptionAlign="center"
             descriptionWidth={670}
             descriptionBlockMargin={24}
-            buttonText="Faca parte!"
+            buttonText="Faça parte!"
             buttonVariant="primary"
             />
         </div>

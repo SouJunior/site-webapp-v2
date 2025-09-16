@@ -43,6 +43,11 @@ const Card: React.FC<CardProps> = ({
   descriptionBlockMargin,
   descriptionAlign,
 
+  titleList,
+  titleListAlign,
+  titleListSize,
+  titleListWeight,
+
   list,
   listSize,
   listColor,
@@ -74,6 +79,17 @@ const Card: React.FC<CardProps> = ({
           >
             {description}
           </Text>
+        )}
+
+        {titleList && (
+          <Text
+            size={titleListSize}
+            textAlign={titleListAlign}
+            weight={titleListWeight}
+          >
+            {titleList}
+          </Text>
+
         )}
 
         {list && list.length > 0 && (

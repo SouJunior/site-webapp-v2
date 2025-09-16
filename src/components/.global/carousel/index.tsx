@@ -1,16 +1,17 @@
 import React from "react";
-import { CarouselContainer, CardsWrapper, Card, CardDescription, CardIcon, CarouselTitle, CarouselSubtitle } from "./styles";
+import { CarouselContainer, CardsWrapper, Card, CardDescription, CardIcon, CarouselTitle, CarouselSubtitle, CardTitle } from "./styles";
 
 interface CarouselProps {
   items: CardItem[];
-  subtitle: string;
+  subtitle?: string;
   title: string;
 };
 
 interface CardItem {
   id: number;
   icon: string;
-  description: string;
+  title: string;
+  description?: string;
 };
 
 const Carousel: React.FC<CarouselProps> = ({ items, title, subtitle }) => {
@@ -21,9 +22,8 @@ const Carousel: React.FC<CarouselProps> = ({ items, title, subtitle }) => {
       <CardsWrapper>
         {items.map((item) => (
           <Card key={item.id}>
-            <CardIcon>
-              <img src={item.icon} alt="" />
-            </CardIcon>
+            <CardIcon src={item.icon}></CardIcon>
+            <CardTitle>{item.title}</CardTitle>
             <CardDescription>{item.description}</CardDescription>
           </Card>
         ))}
