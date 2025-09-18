@@ -38,12 +38,14 @@ export interface CardProps {
   descriptionWidth?: number;
   descriptionTextAlign?: 'left' | 'center' | 'right' | 'justify';
   descriptionBlockMargin?: number;
+  descriptionMarginInline?: number;
 
   list?: string[];
   listSize?: number;
   listColor?: string;
   listWeight?: number;
   listLineHeight?: string;
+  listMarginLeft?: number;
 
   paragraph?: string;
   paragraphSize?: number;
@@ -54,5 +56,5 @@ export interface CardProps {
   buttonText?: string;
   buttonVariant?: 'primary' | 'secondary' | 'tertiary';
   onClick?: () => void;
-  descriptionAlign?: "left" | "center" | "right" | "justify";
+  descriptionAlign?: 'left' | 'center' | 'right' | 'justify';
 }

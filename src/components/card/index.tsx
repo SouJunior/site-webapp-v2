@@ -42,6 +42,7 @@ const Card: React.FC<CardProps> = ({
   descriptionWeight,
   descriptionWidth,
   descriptionBlockMargin,
+  descriptionMarginInline,
   descriptionTextAlign,
 
   list,
@@ -49,6 +50,7 @@ const Card: React.FC<CardProps> = ({
   listColor,
   listWeight,
   listLineHeight,
+  listMarginLeft,
 
   paragraph,
   paragraphSize,
@@ -102,6 +104,7 @@ const Card: React.FC<CardProps> = ({
             color={descriptionColor}
             weight={descriptionWeight}
             marginBlock={descriptionBlockMargin}
+            marginInline={descriptionMarginInline}
             textAlign={descriptionTextAlign}
           >
             {description}
@@ -115,6 +118,7 @@ const Card: React.FC<CardProps> = ({
             color={listColor}
             weight={listWeight}
             lineHeight={listLineHeight}
+            marginLeft={listMarginLeft}
           />
         )}
         {paragraph && (
