@@ -164,7 +164,7 @@ const ProductView: React.FC = () => {
           'Participe de entregas reais com impacto no projeto.',
           'Desenvolva habilidades valorizadas no mercado.',
           'Descubra qual frente de Produto mais combina com você.',
-          'Construa um portfólio e fortalecer seu LinkedIn com experiência real.',
+          'Construa um portfólio e fortaleça seu LinkedIn com experiência real.',
         ]}
         listSize={20}
         listColor="#323232"

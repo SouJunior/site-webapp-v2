@@ -215,10 +215,10 @@ const BackEndView: React.FC = () => {
         marginBlock="2rem"
         title="Por que atuar como Back-end na SouJunior?"
         list={[
-          'Aplique o que aprende nos cursos em um ambiente real',
-          'Resolva problemas técnicos com propósito social',
-          'Aprenda a trabalhar em equipe com processos de mercado',
-          'Desenvolva um portfólio técnico com entregas concretas',
+          'Aplique o que aprende nos cursos em um ambiente real.',
+          'Resolva problemas técnicos com propósito social.',
+          'Aprenda a trabalhar em equipe com processos de mercado.',
+          'Desenvolva um portfólio técnico com entregas concretas.',
         ]}
         listSize={16}
         listColor="#323232"

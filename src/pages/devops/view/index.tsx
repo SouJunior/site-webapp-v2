@@ -14,7 +14,7 @@ import IconMonitoring from '../../../assets/icon-monitoring.svg';
 const skillList = [
   {
     img: IconGitHub,
-    skill: 'SGitHub Actions',
+    skill: 'GitHub Actions',
     desc: 'Para CI/CD.',
   },
   {
@@ -181,7 +181,6 @@ const DevopsView = () => {
           title="Junte-se a nós e faça parte dessa jornada transformadora!"
           description="Sua contribuição pode ser um passo importante para impulsionar
             carreiras e transformar o futuro de muitos profissionais da área tech."
-          descriptionTextAlign="center"
           descriptionWidth={670}
           descriptionBlockMargin={24}
           buttonText="Faça parte!"

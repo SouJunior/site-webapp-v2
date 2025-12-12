@@ -106,7 +106,7 @@ const DataView: React.FC = () => {
 
       <Card
         marginBlock="2rem"
-        title="Por que atuar em Dados na SouJunior?"
+        title="Por que atuar com Dados na SouJunior?"
         description="Participar da área de Dados em um projeto voluntário é uma chance
           incrível de aprender e aplicar conhecimentos de forma prática. Você vai:"
         descriptionWidth={688}

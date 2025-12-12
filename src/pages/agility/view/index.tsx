@@ -12,19 +12,19 @@ import IconWatchful from '../../../assets/skills/watchful-eye.svg';
 const skillList = [
   {
     img: IconCommunication,
-    skill: 'Facilitação de reuniões',
+    skill: 'Facilitação de reuniões.',
   },
   {
     img: IconListening,
-    skill: 'Organização e visão sistêmica',
+    skill: 'Organização e visão sistêmica.',
   },
   {
     img: IconOrganization,
-    skill: 'Comunicação não-violenta',
+    skill: 'Comunicação não-violenta.',
   },
   {
     img: IconWatchful,
-    skill: 'Liderança e facilitação',
+    skill: 'Liderança e facilitação.',
   },
 ];
 
@@ -56,7 +56,7 @@ const AgilityView = () => {
 
           <Text size={20} color="#323232" weight={400}>
             É o papel de quem cuida do como o trabalho acontece e faz isso com
-            muito diálogo, escuta ativa e empatia
+            muito diálogo, escuta ativa e empatia.
           </Text>
 
           <Button variant="primary">Faça parte!</Button>
@@ -153,7 +153,6 @@ const AgilityView = () => {
           title="Junte-se a nós e faça parte dessa jornada transformadora!"
           description="Sua contribuição pode ser um passo importante para impulsionar
             carreiras e transformar o futuro de muitos profissionais da área tech."
-          descriptionTextAlign="center"
           descriptionWidth={670}
           descriptionBlockMargin={24}
           buttonText="Faca parte!"

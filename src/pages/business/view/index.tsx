@@ -159,7 +159,7 @@ const BusinessView = () => {
           'Trabalhar em um ambiente colaborativo com propósito social.',
           'Criar conexões com empresas e profissionais do mercado.',
           'Ter experiências reais que contam no currículo.',
-          'Participar de decisões que impactam o futuro da organização',
+          'Participar de decisões que impactam o futuro da organização.',
         ]}
         listSize={20}
         listColor="#323232"
@@ -173,7 +173,6 @@ const BusinessView = () => {
           title="Junte-se a nós e faça parte dessa jornada transformadora!"
           description="Sua contribuição pode ser um passo importante para impulsionar
             carreiras e transformar o futuro de muitos profissionais da área tech."
-          descriptionTextAlign="center"
           descriptionWidth={670}
           descriptionBlockMargin={24}
           buttonText="Faça parte!"

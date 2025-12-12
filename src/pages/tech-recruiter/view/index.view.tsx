@@ -17,7 +17,7 @@ import WatchfulEye from '../../../assets/skills/watchful-eye.svg';
 const skillList = [
   {
     image: Communication,
-    skill: 'Comunicação clara',
+    skill: 'Comunicação clara.',
   },
   {
     image: Listening,

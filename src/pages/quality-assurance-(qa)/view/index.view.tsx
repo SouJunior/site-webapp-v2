@@ -34,12 +34,12 @@ const skillList = [
   {
     image: Tests,
     skill: 'Testes',
-    desc: 'A base de qualquer projeto frontend',
+    desc: 'A base de qualquer projeto frontend.',
   },
   {
     image: Feedbacks,
     skill: 'Feedbacks',
-    desc: 'A base de qualquer projeto frontend',
+    desc: 'A base de qualquer projeto frontend.',
   },
 ];
 
@@ -141,7 +141,7 @@ const QAView: React.FC = () => {
           list={[
             'Criar e executar planos de teste manuais.',
             'Escrever cenários de testes com base em critérios de aceitação.',
-            'Participar das cerimônias do time (planning, review, refinamentos)',
+            'Participar das cerimônias do time (planning, review, refinamentos).',
             'Validar entregas em diferentes dispositivos e navegadores.',
             'Colaborar com Produto e Tech para prever possíveis erros.',
             'Apoiar na identificação e documentação de bugs.',
