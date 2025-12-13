@@ -11,7 +11,7 @@ export const CardsWrapper = styled.div`
   gap: 28rem;
   margin: 0 auto;
   padding: 10px 0;
-  padding-right: 29rem;
+  padding-right: 31rem;
   width: ${pxToRem(1042)};
   border: 1px solid #338aff;
   border-radius: 20px;

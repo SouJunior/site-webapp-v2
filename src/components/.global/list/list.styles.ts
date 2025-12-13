@@ -6,7 +6,7 @@ export const ListContainer = styled.ul<Omit<ListProps, 'list'>>`
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  align-content: center;
+  align-content: ${({ alignContent = 'center' }) => alignContent};
   width: ${({ width = '100%' }) => width};
   font-size: ${({ size = 20 }) => `${pxToRem(size)}`};
   font-weight: ${({ weight }) => weight};
@@ -14,5 +14,6 @@ export const ListContainer = styled.ul<Omit<ListProps, 'list'>>`
   color: ${({ color }) => color};
   margin-top: ${({ marginTop = 0 }) => pxToRem(marginTop)};
   margin-bottom: 1rem;
+  margin: ${({ margin }) => margin};
   margin-left: ${({ marginLeft = 6 }) => pxToRem(marginLeft)};
 `;

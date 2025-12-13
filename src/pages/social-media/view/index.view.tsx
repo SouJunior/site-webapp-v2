@@ -7,13 +7,62 @@ import Subtitle from '../../../components/.global/subtitle';
 import Text from '../../../components/.global/text';
 import Title from '../../../components/.global/title';
 import ImageSocialMedia from '../../../assets/areas-expertise/social-media.png';
-import ImageSocialMedia2 from '../../../assets/areas-expertise/social-media2.png';
+import Img from '../../../assets/areas-expertise/social-media-carousel/img.png';
+import Img2 from '../../../assets/areas-expertise/social-media-carousel/img2.png';
 import Card from '../../../components/card';
 import Button from '../../../components/.global/button';
+import Carousel from '../../../components/carousel';
 
 const SocialMediaView: React.FC = () => {
   const { announce } = useScreenReaderAnnouncer();
   const { focusMainContent } = useFocusManagement();
+
+  const carouselItems = [
+    {
+      img: Img,
+      title: 'Criação de Conteúdo – Redação',
+      description: (
+        <>
+          Se você gosta de escrever, pesquisar, traduzir ideias em palavras
+          claras e criativas, essa é sua área!
+          <br />
+          <p style={{ marginBlock: '1.5rem', color: '#0056b3' }}>
+            O que você aprende e faz na SouJunior:
+          </p>
+        </>
+      ),
+      list: [
+        'Escreve posts para Instagram, LinkedIn e outras redes.',
+        'Redige legendas, títulos e copys com foco em engajamento.',
+        'Transforma temas complexos (como produto, tech, design) em linguagem acessível.',
+        'Participa do calendário editorial e da estratégia de conteúdo.',
+        'Aprende sobre tom de voz, storytelling e escrita estratégica.',
+        'Recebe feedbacks construtivos para aprimorar seu texto.',
+      ],
+    },
+    {
+      img: Img2,
+      title: 'Criação de Peças – Design',
+      description: (
+        <>
+          Se você curte criar visualmente, explorar composições, cores e
+          transformar textos em imagens atrativas, aqui é o seu lugar.
+          <br />
+          <p style={{ marginBlock: '1.5rem', color: '#0056b3' }}>
+            O que você aprende e faz na SouJunior:
+          </p>
+        </>
+      ),
+      list: [
+        'Cria peças visuais com base nos conteúdos e briefings.',
+        'Aplica identidade visual do projeto com consistência.',
+        'Aprende sobre hierarquia visual, contraste, tipografia e harmonia.',
+        'Usa ferramentas para design de redes sociais (Canva ou Figma).',
+        'Trabalha junto com redatores e social media para entregar com propósito.',
+        'Participa de brainstorms e traz referências criativas.',
+      ],
+    },
+  ];
 
   // Set page title for screen readers
   useEffect(() => {
@@ -74,47 +123,7 @@ const SocialMediaView: React.FC = () => {
         />
       </main>
 
-      <section>
-        <Card
-          edgeSection
-          padding="2rem 1rem"
-          width={1042}
-          border="1px solid #0056b3"
-          imageSrc={ImageSocialMedia2}
-          imageWidth={450}
-          title="Criação de Conteúdo – Redação"
-          titleAs="h3"
-          titleSize={24}
-          titleMarginTop={45}
-          description={
-            <>
-              Se você gosta de escrever, pesquisar, traduzir ideias em palavras
-              claras e criativas, essa é sua área!
-              <br />
-              <p style={{ marginBlock: '1.5rem', color: '#0056b3' }}>
-                O que você aprende e faz na SouJunior:
-              </p>
-            </>
-          }
-          descriptionSize={16}
-          descriptionColor="#000000"
-          descriptionWeight={400}
-          descriptionWidth={500}
-          descriptionMarginInline={0}
-          list={[
-            'Escreve posts para Instagram, LinkedIn e outras redes.',
-            'Redige legendas, títulos e copys com foco em engajamento.',
-            'Transforma temas complexos (como produto, tech, design) em linguagem acessível.',
-            'Participa do calendário editorial e da estratégia de conteúdo.',
-            'Aprende sobre tom de voz, storytelling e escrita estratégica.',
-            'Recebe feedbacks construtivos para aprimorar seu texto.',
-          ]}
-          listSize={16}
-          listColor="#000000"
-          listWeight={400}
-          listMarginLeft={28}
-        />
-      </section>
+      <Carousel items={carouselItems} />
 
       <Card
         marginBlock="2rem"

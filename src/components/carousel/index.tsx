@@ -13,8 +13,9 @@ interface CarouselProps {
   img: string;
   title: string;
   subtitle?: string;
-  description?: string;
+  description?: string | JSX.Element;
   list?: string[];
+  hasListMarginLeft?: boolean;
 }
 
 const Carousel: React.FC<{ items: CarouselProps[] }> = ({ items }) => {
@@ -120,18 +121,19 @@ const Carousel: React.FC<{ items: CarouselProps[] }> = ({ items }) => {
             title={item.title}
             titleAs="h3"
             titleSize={24}
-            titleMarginTop={45}
             description={item.description}
             descriptionLineHeight={1.6}
             descriptionSize={16}
             descriptionColor="#000000"
             descriptionWeight={400}
-            descriptionWidth={468}
+            descriptionWidth={500}
             list={item.list}
+            listAlignContent="flex-start"
             listSize={16}
             listColor="#000000"
             listWeight={400}
-            listMarginLeft={24}
+            listMarginLeft={item.hasListMarginLeft ? 0 : 24}
+            listMargin="0 0 2.5rem 0"
           />
         ))}
       </CardsWrapper>

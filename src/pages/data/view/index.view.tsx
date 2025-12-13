@@ -6,14 +6,71 @@ import {
 import Subtitle from '../../../components/.global/subtitle';
 import Text from '../../../components/.global/text';
 import Title from '../../../components/.global/title';
-import Data from '../../../assets/areas-expertise/data.png';
-import Data2 from '../../../assets/areas-expertise/data2.png';
+import ImgData from '../../../assets/areas-expertise/data.png';
+import Img from '../../../assets/areas-expertise/data-carousel/img.png';
+import Img2 from '../../../assets/areas-expertise/data-carousel/img2.png';
+import Img3 from '../../../assets/areas-expertise/data-carousel/img3.png';
 import Card from '../../../components/card';
 import Button from '../../../components/.global/button';
+import Carousel from '../../../components/carousel';
 
 const DataView: React.FC = () => {
   const { announce } = useScreenReaderAnnouncer();
   const { focusMainContent } = useFocusManagement();
+
+  const carouselItems = [
+    {
+      img: Img,
+      title: 'Analytics',
+      description: (
+        <>
+          Quem atua com Analytics ajuda os times a entender
+          <br />o que os dados estão dizendo. A pessoa analista pode:
+        </>
+      ),
+      list: [
+        'Acompanhar indicadores de desempenho (como engajamento, conversão, etc.).',
+        'Criar dashboards e relatórios com insights acionáveis.',
+        'Apoiar decisões de Produto, Marketing e outras áreas com dados.',
+        'Trabalhar com ferramentas como Google Sheets, Looker Studio, SQL ou Python.',
+      ],
+    },
+    {
+      img: Img2,
+      title: 'Business Intelligence',
+      description: (
+        <>
+          Na frente de BI, o foco é construir soluções que tragam visibilidade
+          <br /> para o negócio como um todo.
+          <br /> Aqui, você vai:
+        </>
+      ),
+      hasListMarginLeft: false,
+      list: [
+        'Criar painéis e relatórios com foco em visão estratégica.',
+        'Ajudar a definir e manter KPIs do projeto.',
+        'Estruturar bases de dados para facilitar a análise.',
+        'Trabalhar na padronização e governança dos dados.',
+      ],
+    },
+    {
+      img: Img3,
+      title: 'Engenharia de Dados',
+      description: (
+        <>
+          A Engenharia de Dados garante que os dados estejam organizados,
+          <br /> acessíveis e prontos para serem usados.
+          <br /> Aqui, a pessoa voluntária pode:
+        </>
+      ),
+      list: [
+        'Trabalhar na coleta, limpeza e transformação de dados (ETL).',
+        'Automatizar fluxos com scripts e ferramentas como Python ou SQL.',
+        'Criar pipelines e conectar fontes de dados externas.',
+        'Apoiar a estruturação de bancos e armazenamento.',
+      ],
+    },
+  ];
 
   // Set page title for screen readers
   useEffect(() => {
@@ -68,45 +125,24 @@ const DataView: React.FC = () => {
             {/* Dynamic content will be announced to screen readers */}
           </div>
         </section>
-        <img src={Data} alt="Ilustração representando a atuação de Produto" />
+        <img
+          src={ImgData}
+          alt="Ilustração representando a atuação de Produto"
+        />
       </main>
 
-      <section>
+      <section style={{ marginBlock: '4rem' }}>
         <Title as="h2" textAlign="center" size={32} width={568}>
           Conheça os cargos de Dados que você pode explorar com a gente:
         </Title>
 
-        <Card
-          edgeSection
-          padding="2rem 1rem"
-          width={1042}
-          border="1px solid #0056b3"
-          imageSrc={Data2}
-          title="Analytics"
-          titleAs="h3"
-          titleSize={24}
-          titleMarginTop={45}
-          description="Quem atua com Analytics ajuda os times a entender 
-            o que os dados estão dizendo. A pessoa analista pode:"
-          descriptionSize={16}
-          descriptionColor="#000000"
-          descriptionWeight={400}
-          descriptionWidth={404}
-          list={[
-            'Acompanhar indicadores de desempenho (como engajamento, conversão, etc.).',
-            'Criar dashboards e relatórios com insights acionáveis.',
-            'Apoiar decisões de Produto, Marketing e outras áreas com dados.',
-            'Trabalhar com ferramentas como Google Sheets, Looker Studio, SQL ou Python.',
-          ]}
-          listSize={16}
-          listColor="#000000"
-          listWeight={400}
-        />
+        <Carousel items={carouselItems} />
       </section>
 
       <Card
-        marginBlock="2rem"
+        marginBlock="4rem"
         title="Por que atuar em Dados na SouJunior?"
+        titleTextAlign="center"
         description="Participar da área de Dados em um projeto voluntário é uma chance
           incrível de aprender e aplicar conhecimentos de forma prática. Você vai:"
         descriptionWidth={688}

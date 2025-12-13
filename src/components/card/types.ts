@@ -47,12 +47,15 @@ export interface CardProps {
   descriptionMarginInline?: number;
 
   list?: string[];
+  listAlignContent?: string;
   listSize?: number;
   listColor?: string;
   listWeight?: number;
   listLineHeight?: string;
+  listMargin?: string;
   listMarginLeft?: number;
   listMarginTop?: number;
+  hasListMarginLeft?: boolean;
 
   paragraph?: string;
   paragraphSize?: number;

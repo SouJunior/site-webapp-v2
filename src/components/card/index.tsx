@@ -53,10 +53,12 @@ const Card: React.FC<CardProps> = ({
   titleListWeight,
 
   list,
+  listAlignContent,
   listSize,
   listColor,
   listWeight,
   listLineHeight,
+  listMargin,
   listMarginLeft,
   listMarginTop,
 
@@ -135,14 +137,17 @@ const Card: React.FC<CardProps> = ({
         {list && list.length > 0 && (
           <List
             list={list}
+            alignContent={listAlignContent}
             size={listSize}
             color={listColor}
             weight={listWeight}
             lineHeight={listLineHeight}
+            margin={listMargin}
             marginLeft={listMarginLeft}
             marginTop={listMarginTop}
           />
         )}
+
         {paragraph && (
           <Paragraph
             size={paragraphSize}
