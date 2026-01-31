@@ -11,15 +11,17 @@ export const StyledLink = styled.a<
     | 'paddingX'
     | 'width'
     | 'height'
-    | 'isFistLink'
+    | 'isFirstLink'
+    | 'isLastLink'
   >
 >`
   color: ${({ color }) =>
-    color ? color : '#0056b3'}; /* Darker blue for better contrast */
+    color ? color : '#003986'}; /* Darker blue for better contrast */
   text-decoration: none;
-  cursor: ${({ isFistLink }) => (isFistLink ? 'auto' : 'pointer')};
+  cursor: ${({ isFirstLink }) => (isFirstLink ? 'auto' : 'pointer')};
   font-size: ${({ size = 16 }) => pxToRem(size)};
   font-weight: 500;
+  border: ${({ isLastLink }) => (isLastLink ? '2px solid #003986' : 'none')};
   border-radius: 4px;
   padding-block: ${({ paddingY }) => (paddingY ? pxToRem(paddingY) : 'auto')};
   padding-inline: ${({ paddingX }) => (paddingX ? pxToRem(paddingX) : 'auto')};
@@ -35,10 +37,11 @@ export const StyledLink = styled.a<
   justify-content: center;
 
   &:hover {
-    text-decoration: ${({ isFistLink }) => (isFistLink ? 'none' : 'underline')};
-    background-color: ${({ isFistLink }) =>
-      isFistLink ? 'transparent' : 'rgba(0, 86, 179, 0.1)'};
-    color: ${({ isFistLink }) => (isFistLink ? '#fff' : '#0056b3')};
+    text-decoration: ${({ isFirstLink }) =>
+      isFirstLink ? 'none' : 'underline'};
+    background-color: ${({ isFirstLink }) =>
+      isFirstLink ? 'transparent' : 'rgba(0, 86, 179, 0.1)'};
+    color: ${({ isFirstLink }) => (isFirstLink ? '#fff' : '#0056b3')};
   }
 
   &:focus {

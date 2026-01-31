@@ -15,9 +15,9 @@ export const createHeaderLinks = (
       ariaLabel: 'Navegar para a página Nossas Iniciativas',
     },
     {
-      label: 'testimonials',
-      onClick: () => navigate(RouteEnum.TESTIMONIALS),
-      ariaLabel: 'Navegar para a página Depoimentos',
+      label: 'newsAndEvents',
+      onClick: () => navigate(RouteEnum.newsAndEvents),
+      ariaLabel: 'Navegar para a página Notícias & Eventos',
     },
     {
       label: 'joinUs',

@@ -13,5 +13,6 @@ export interface LinkProps {
   paddingX?: number;
   width?: number | string;
   height?: number | string;
-  isFistLink?: boolean;
+  isFirstLink?: boolean;
+  isLastLink?: boolean;
 }

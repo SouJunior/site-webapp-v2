@@ -3,21 +3,14 @@ import { pxToRem } from '../../utils/pxToRem';
 
 export const HeaderContainer = styled.header`
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   gap: ${pxToRem(24)};
   padding: 1rem 2rem;
   min-height: 60px; /* Ensure adequate touch target height */
   font-weight: 500;
-  font-style: medium; //TODO ?
   position: relative;
-
-  & div {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-  }
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
   /* Responsive design */
   @media (max-width: 768px) {
