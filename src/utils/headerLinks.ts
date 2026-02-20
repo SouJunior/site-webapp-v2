@@ -86,5 +86,10 @@ export const createHeaderLinks = (
       onClick: () => navigate(RouteEnum2.DEV_OPS),
       ariaLabel: 'Navegar para a página dev-ops',
     },
+    {
+      label: 'home',
+      onClick: () => navigate(RouteEnum2.HOME),
+      ariaLabel: 'Navegar para a página home',
+    },
   ],
 ];

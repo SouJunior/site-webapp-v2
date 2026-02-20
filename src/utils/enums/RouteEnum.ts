@@ -7,12 +7,13 @@ export enum RouteEnum {
 }
 
 export enum RouteEnum2 {
+  HOME = '/',
   BUSINESS = '/business',
   TECH_RECRUITER = '/tech-recruiter',
   PRODUCT = '/produto',
   AGILITY = '/agilidade',
   SOCIAL_MEDIA = '/social-media',
-  UI_UX_DESIGN = '/',
+  UI_UX_DESIGN = '/design',
   FRONT_END = '/front-end',
   BACK_END = '/back-end',
   DATA = '/dados',
