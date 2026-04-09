@@ -42,6 +42,14 @@ export const HomeButton = styled.a`
   margin-top: 3rem;
 `;
 
+export const Toothpick = styled.div`
+  position: relative;
+  width: 1px;
+  height: 2.6rem;
+  background-color: #666666;
+  margin: 1rem 10rem;
+`;
+
 export const TestimonialColumn = styled.div`
   margin-inline: auto;
   min-width: 354px;

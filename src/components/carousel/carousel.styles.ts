@@ -4,7 +4,6 @@ export const CarouselContainer = styled.div`
   padding: 10px 0;
   position: relative;
   width: 100%;
-  max-width: 1080px;
   margin: 0 auto;
 `;
 
@@ -13,7 +12,7 @@ export const CardsWrapper = styled.div`
   gap: 1.5rem;
   margin: 0 auto;
   padding: 10px 0;
-  width: 100%;
+  width: 92.5%;
   overflow-x: auto;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;

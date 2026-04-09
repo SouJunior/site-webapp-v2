@@ -34,6 +34,7 @@ import {
   TestimonialAuthor,
   TestimonialCard,
   TestimonialColumn,
+  Toothpick,
 } from './styles';
 import { HOME_TESTIMONIALS } from './testimonialsData';
 
@@ -112,16 +113,33 @@ const HomeView = () => {
       <HomeContainer>
         <HomeContent>
           <HomeTextContent>
-            <Title id="home-heading" color="white" size={40} marginBottom={40}>
+            <Title
+              id="home-heading"
+              color="white"
+              size={40}
+              marginBottom="3rem"
+            >
               Desenvolva habilidades no mercado Tech
             </Title>
 
-            <Text size={18} color="white" weight={300} marginBlock={0}>
+            <Text
+              size={18}
+              color="white"
+              weight={300}
+              marginBlock={0}
+              lineHeight={1.4}
+            >
               Na SouJunior, você trabalha com produtos digitais e adquire
               habilidades valiosas para a sua carreira.
             </Text>
 
-            <Text size={18} color="white" weight={300} marginBlock={0}>
+            <Text
+              size={18}
+              color="white"
+              weight={300}
+              marginBlock={0}
+              lineHeight={1.4}
+            >
               Você terá chance de desenvolver suas competências e aprofundar o
               seu conhecimento em áreas de seu interesse, aumentando assim suas
               chances de sucesso na sua trajetória profissional.
@@ -198,45 +216,41 @@ const HomeView = () => {
           Nosso impacto
         </Title>
 
-        <div style={{ display: 'flex', justifyContent: 'center' }}>
+        <div
+          style={{
+            display: 'flex',
+            justifyContent: 'center',
+            marginBottom: '4rem',
+          }}
+        >
           <p
             style={{
-              borderInlineEnd: '1px',
-              borderInlineEndStyle: 'solid',
-              borderInlineColor: '#666666',
-              paddingRight: '10rem',
               fontSize: '1.5rem',
               textAlign: 'center',
             }}
           >
-            <span style={{ fontSize: '2.25rem', fontWeight: 300 }}>+ 200</span>
+            <span style={{ fontSize: '2.25rem', fontWeight: 300 }}>10</span>
             <br />
             <span style={{ fontWeight: 600 }}>Participantes</span>
           </p>{' '}
+          <Toothpick />
           <p
             style={{
-              borderInlineEnd: '1px',
-              borderInlineEndStyle: 'solid',
-              borderInlineColor: '#666666',
-              paddingRight: '10rem',
-              marginInline: '10rem',
               fontSize: '1.5rem',
               textAlign: 'center',
             }}
           >
-            <span style={{ fontSize: '2.25rem', fontWeight: 300 }}>+ 200</span>
+            <span style={{ fontSize: '2.25rem', fontWeight: 300 }}>+ 100</span>
             <br />
             <span style={{ fontWeight: 600 }}>Participantes</span>
           </p>{' '}
+          <Toothpick />
           <p style={{ fontSize: '1.5rem', textAlign: 'center' }}>
-            <span style={{ fontSize: '2.25rem', fontWeight: 300 }}>+ 200</span>
+            <span style={{ fontSize: '2.25rem', fontWeight: 300 }}>+ 30</span>
             <br />
             <span style={{ fontWeight: 600 }}>Participantes</span>
           </p>
         </div>
-        <hr
-          style={{ width: '400px', marginTop: '3rem', marginInline: 'auto' }}
-        />
       </section>
 
       <AreasContainer>
