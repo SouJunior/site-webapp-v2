@@ -1,0 +1,11 @@
+node_modules
+build
+.git
+.gitignore
+.husky
+.vscode
+tests
+*.md
+.dockerignore
+Dockerfile
+docker-compose.yml
