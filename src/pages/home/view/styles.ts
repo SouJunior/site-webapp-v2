@@ -45,7 +45,7 @@ export const HomeButton = styled.a`
 export const Toothpick = styled.div`
   position: relative;
   width: 1px;
-  height: 2.6rem;
+  height: 3.125rem;
   background-color: #666666;
   margin: 1rem 10rem;
 `;

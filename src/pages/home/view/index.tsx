@@ -233,33 +233,53 @@ const HomeView = () => {
             marginBottom: '4rem',
           }}
         >
-          <p
+          <div
             style={{
-              fontSize: '1.5rem',
-              textAlign: 'center',
+              maxWidth: '309px',
             }}
           >
-            <span style={{ fontSize: '2.25rem', fontWeight: 300 }}>10</span>
-            <br />
-            <span style={{ fontWeight: 600 }}>Squads Atuantes</span>
-          </p>{' '}
+            <p
+              style={{
+                fontSize: '1.5rem',
+                textAlign: 'center',
+              }}
+            >
+              <span style={{ fontSize: '2.25rem', fontWeight: 300 }}>10</span>
+              <br />
+              <span style={{ fontWeight: 600 }}>Squads Atuantes</span>
+            </p>{' '}
+          </div>
           <Toothpick />
-          <p
+          <div
             style={{
-              fontSize: '1.5rem',
-              textAlign: 'center',
+              maxWidth: '309px',
             }}
           >
-            <span style={{ fontSize: '2.25rem', fontWeight: 300 }}>+ 100</span>
-            <br />
-            <span style={{ fontWeight: 600 }}>Participantes</span>
-          </p>{' '}
+            <p
+              style={{
+                fontSize: '1.5rem',
+                textAlign: 'center',
+              }}
+            >
+              <span style={{ fontSize: '2.25rem', fontWeight: 300 }}>
+                + 100
+              </span>
+              <br />
+              <span style={{ fontWeight: 600 }}>Voluntários Ativos</span>
+            </p>{' '}
+          </div>
           <Toothpick />
-          <p style={{ fontSize: '1.5rem', textAlign: 'center' }}>
-            <span style={{ fontSize: '2.25rem', fontWeight: 300 }}>+ 30</span>
-            <br />
-            <span style={{ fontWeight: 600 }}>Participantes</span>
-          </p>
+          <div
+            style={{
+              maxWidth: '309px',
+            }}
+          >
+            <p style={{ fontSize: '1.5rem', textAlign: 'center' }}>
+              <span style={{ fontSize: '2.25rem', fontWeight: 300 }}>+ 30</span>
+              <br />
+              <span style={{ fontWeight: 600 }}>Apoiadores do Projeto</span>
+            </p>
+          </div>
         </div>
       </section>
 
