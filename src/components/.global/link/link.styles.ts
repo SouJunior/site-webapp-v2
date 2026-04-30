@@ -13,12 +13,19 @@ export const StyledLink = styled.a<
     | 'height'
     | 'isFirstLink'
     | 'isLastLink'
+    | 'isActive'
   >
 >`
-  color: ${({ color }) =>
-    color ? color : '#003986'}; /* Darker blue for better contrast */
+  color: ${({ color, isActive }) =>
+    color
+      ? color
+      : isActive
+        ? '#0056b3'
+        : '#003986'}; /* Darker blue for better contrast */
   text-decoration: none;
   cursor: ${({ isFirstLink }) => (isFirstLink ? 'auto' : 'pointer')};
+  background-color: ${({ isActive }) =>
+    isActive ? 'rgba(0,86,179,0.1)' : 'transparent'};
   font-size: ${({ size = 16 }) => pxToRem(size)};
   font-weight: 500;
   border: ${({ isLastLink }) => (isLastLink ? '2px solid #003986' : 'none')};

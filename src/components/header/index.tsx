@@ -12,6 +12,15 @@ const Header: React.FC<HeaderProps> = ({ links }) => {
   const location = useLocation();
   const isAreaPage = location.pathname.startsWith('/area/');
 
+  const isLinkActive = (route?: string) => {
+    if (!route) return false;
+    if (route.includes('#')) {
+      const hash = route.split('#')[1];
+      return location.hash === `#${hash}`;
+    }
+    return location.pathname === route;
+  };
+
   return (
     <HeaderContainer role="banner">
       <div>
@@ -34,6 +43,7 @@ const Header: React.FC<HeaderProps> = ({ links }) => {
                 role="menuitem"
                 paddingY={8}
                 paddingX={12}
+                isActive={isLinkActive(link.route)}
               >
                 {t(`links.${link.label}`)}
               </Link>
@@ -46,7 +56,7 @@ const Header: React.FC<HeaderProps> = ({ links }) => {
         <NavLinks
           role="navigation"
           aria-label="Navegação secundaria"
-          style={{ gap: '1.35rem', marginTop: '1.5rem', marginBottom: '1rem' }}
+          style={{ gap: '3.35rem', marginTop: '1.5rem', marginBottom: '1rem' }}
         >
           {links[1]?.map((link) => (
             <Link
@@ -59,6 +69,7 @@ const Header: React.FC<HeaderProps> = ({ links }) => {
               paddingY={8}
               paddingX={12}
               isLastLink={link.label === 'supportUs' && true}
+              isActive={isLinkActive(link.route)}
             >
               {t(`links.${link.label}`)}
             </Link>

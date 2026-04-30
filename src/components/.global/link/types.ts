@@ -15,4 +15,5 @@ export interface LinkProps {
   height?: number | string;
   isFirstLink?: boolean;
   isLastLink?: boolean;
+  isActive?: boolean;
 }
