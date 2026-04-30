@@ -186,23 +186,33 @@ const HomeView = () => {
         </Title>
 
         <Card
-          width={879}
+          width={900}
           marginBlock="0"
           description={
             <>
-              O projeto SouJunior, criado em 1º de julho de 2022 por Wouerner
-              Brandão, surgiu da insatisfação com o mercado de tecnologia e da
-              falta de oportunidades para iniciantes.
-              <p style={{ marginBlock: '1rem' }}>
+              <p style={{ lineHeight: '140%' }}>
+                O projeto SouJunior, criado em 1º de julho de 2022 por Wouerner
+                Brandão, surgiu da insatisfação com o mercado de tecnologia e da
+                falta de oportunidades para iniciantes.
+              </p>
+              <p
+                style={{
+                  marginBlock: '1rem',
+                  lineHeight: '140%',
+                }}
+              >
                 Com mais de 120 voluntários, a iniciativa prepara profissionais
                 juniores por meio da prática real, construção de produtos e
                 vivência do dia a dia de uma empresa tech.{' '}
               </p>
-              O projeto conta com mentores experientes que lideram os times e
-              oferece um portfólio de produtos para dar visibilidade aos
-              juniores, conectando-os a recrutadores e oportunidades. Participar
-              da SouJunior proporciona experiência prática, networking, mentoria
-              e acesso à primeira oportunidade no mercado.
+              <p style={{ lineHeight: '140%' }}>
+                O projeto conta com mentores experientes que lideram os times e
+                oferece um portfólio de produtos para dar visibilidade aos
+                juniores, conectando-os a recrutadores e oportunidades.
+                Participar da SouJunior proporciona experiência prática,
+                networking, mentoria e acesso à primeira oportunidade no
+                mercado.
+              </p>
             </>
           }
           descriptionSize={16}
@@ -229,33 +239,53 @@ const HomeView = () => {
             marginBottom: '4rem',
           }}
         >
-          <p
+          <div
             style={{
-              fontSize: '1.5rem',
-              textAlign: 'center',
+              maxWidth: '309px',
             }}
           >
-            <span style={{ fontSize: '2.25rem', fontWeight: 300 }}>10</span>
-            <br />
-            <span style={{ fontWeight: 600 }}>Participantes</span>
-          </p>{' '}
+            <p
+              style={{
+                fontSize: '1.5rem',
+                textAlign: 'center',
+              }}
+            >
+              <span style={{ fontSize: '2.25rem', fontWeight: 300 }}>10</span>
+              <br />
+              <span style={{ fontWeight: 600 }}>Squads Atuantes</span>
+            </p>{' '}
+          </div>
           <Toothpick />
-          <p
+          <div
             style={{
-              fontSize: '1.5rem',
-              textAlign: 'center',
+              maxWidth: '309px',
             }}
           >
-            <span style={{ fontSize: '2.25rem', fontWeight: 300 }}>+ 100</span>
-            <br />
-            <span style={{ fontWeight: 600 }}>Participantes</span>
-          </p>{' '}
+            <p
+              style={{
+                fontSize: '1.5rem',
+                textAlign: 'center',
+              }}
+            >
+              <span style={{ fontSize: '2.25rem', fontWeight: 300 }}>
+                + 100
+              </span>
+              <br />
+              <span style={{ fontWeight: 600 }}>Voluntários Ativos</span>
+            </p>{' '}
+          </div>
           <Toothpick />
-          <p style={{ fontSize: '1.5rem', textAlign: 'center' }}>
-            <span style={{ fontSize: '2.25rem', fontWeight: 300 }}>+ 30</span>
-            <br />
-            <span style={{ fontWeight: 600 }}>Participantes</span>
-          </p>
+          <div
+            style={{
+              maxWidth: '309px',
+            }}
+          >
+            <p style={{ fontSize: '1.5rem', textAlign: 'center' }}>
+              <span style={{ fontSize: '2.25rem', fontWeight: 300 }}>+ 30</span>
+              <br />
+              <span style={{ fontWeight: 600 }}>Apoiadores do Projeto</span>
+            </p>
+          </div>
         </div>
       </section>
 
