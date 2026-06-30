@@ -595,13 +595,9 @@ const HomeView = () => {
         </div>
 
         <NewsAndEventsCarousel items={carouselNewsEvents} />
-
-        <hr
-          style={{ width: '600px', marginTop: '3rem', marginInline: 'auto' }}
-        />
       </section>
 
-      <section
+      {/* <section
         id="nossas-iniciativas"
         aria-label="Nossas iniciativas"
         style={{
@@ -691,10 +687,13 @@ const HomeView = () => {
           </CustomCardWrapper>
         </CardsWrapper>
         <Divider />
-      </section>
+      </section> */}
+
       <div style={{ position: 'relative' }}>
         <SuporterContainer id="seja-um-apoiador">
           <SuporterContent>
+            <Divider />
+
             <SuporterTitle>Seja um Apoiador!</SuporterTitle>
             <Text
               size={16}

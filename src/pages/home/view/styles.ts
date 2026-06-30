@@ -294,14 +294,15 @@ export const JoinButton = styled.a`
 `;
 
 export const SuporterContainer = styled.div`
-  padding: 60px 0 40px 0;
+  padding: 0 0 40px 0;
   display: flex;
   justify-content: center;
   user-select: none;
   margin-top: 20px;
+  background-color: #e6e6e6;
 
   @media (max-width: 430px) {
-    padding: 16px 24px 16px 24px;
+    padding: 0 24px 16px 24px;
   }
 `;
 

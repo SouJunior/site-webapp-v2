@@ -26,10 +26,10 @@ const footerLinks = [
     label: 'Missão, Valores e Visão',
     to: LinkFooterEnum.MISSION_VALUES_VISION.toString(),
   },
-  {
-    label: 'Nossas Iniciativas',
-    to: LinkFooterEnum.INITIATIVES.toString(),
-  },
+  // {
+  //   label: 'Nossas Iniciativas',
+  //   to: LinkFooterEnum.INITIATIVES.toString(),
+  // },
 ];
 
 const footerLinks2 = [

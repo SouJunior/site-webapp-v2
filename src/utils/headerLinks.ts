@@ -32,12 +32,12 @@ export const createHeaderLinks = (navigate: (route: RouteEnum) => void) => {
         ariaLabel: 'Navegar para a página Sobre Nós',
         route: RouteEnum.ABOUT_US,
       },
-      {
-        label: 'initiatives',
-        onClick: () => handleAnchorClick(RouteEnum.INITIATIVES),
-        ariaLabel: 'Navegar para a página Nossas Iniciativas',
-        route: RouteEnum.INITIATIVES,
-      },
+      // {
+      //   label: 'initiatives',
+      //   onClick: () => handleAnchorClick(RouteEnum.INITIATIVES),
+      //   ariaLabel: 'Navegar para a página Nossas Iniciativas',
+      //   route: RouteEnum.INITIATIVES,
+      // },
       {
         label: 'newsAndEvents',
         onClick: () => handleAnchorClick(RouteEnum.NEWS_AND_EVENTS),
