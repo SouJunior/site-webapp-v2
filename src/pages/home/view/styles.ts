@@ -128,10 +128,45 @@ export const Toothpick = styled.div`
   margin: 1rem 10rem;
 `;
 
+export const ContainerTestimonialTitle = styled.div`
+  text-align: center;
+`;
+
+export const TestimonialTitle = styled.h2`
+  color: #001633;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 150%;
+  text-align: center;
+
+  @media (max-width: 430px) {
+    font-size: 24px;
+    font-weight: 600;
+  }
+`;
+
+export const TestimonialText = styled.p`
+  color: #001633;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.2;
+  text-align: center;
+  margin-block: 12px;
+
+  @media (max-width: 430px) {
+    font-size: 16px;
+    font-weight: 400;
+  }
+`;
+
 export const TestimonialColumn = styled.div`
   margin-inline: auto;
   min-width: 354px;
   padding: 10px;
+
+  @media (max-width: 430px) {
+    min-width: 280px;
+  }
 `;
 
 export const TestimonialCard = styled.article`
@@ -144,6 +179,12 @@ export const TestimonialCard = styled.article`
 
   &:hover {
     transform: scale(1.04);
+  }
+
+  @media (max-width: 430px) {
+    width: 280px;
+    height: 280px;
+    padding: 0.75rem;
   }
 `;
 

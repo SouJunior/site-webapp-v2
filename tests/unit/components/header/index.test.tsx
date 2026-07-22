@@ -7,8 +7,10 @@ import '@testing-library/jest-dom';
 describe('Header Component', () => {
   it('should render correctly', () => {
     const links = [
-      { label: 'Sobre nós', to: '/about', onClick: jest.fn() },
-      // { label: "Nossas iniciativas", to: "/initiatives", onClick: jest.fn() },
+      [
+        { label: 'Sobre nós', to: '/about', onClick: jest.fn() },
+        // { label: "Nossas iniciativas", to: "/initiatives", onClick: jest.fn() },
+      ],
     ];
 
     const { getByAltText, getByText } = render(
@@ -23,8 +25,10 @@ describe('Header Component', () => {
 
   it('should match snapshot', () => {
     const links = [
-      { label: 'aboutUs', onClick: jest.fn() },
-      // { label: 'initiatives', onClick: jest.fn() },
+      [
+        { label: 'aboutUs', onClick: jest.fn() },
+        // { label: 'initiatives', onClick: jest.fn() },
+      ],
     ];
 
     const { container } = render(

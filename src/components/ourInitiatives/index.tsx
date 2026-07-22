@@ -64,6 +64,7 @@ function OurInitiatives() {
                 window.open(
                   'https://docs.google.com/forms/d/e/1FAIpQLSd1IspO3Hwylce2kHtIsmyBAkH7p3VFmdYUmdL75YXZ-DSNBA/viewform',
                   '_blank',
+                  'noopener,noreferrer',
                 )
               }
             />
@@ -93,7 +94,11 @@ function OurInitiatives() {
               buttonText="Acesse"
               buttonVariant="outline"
               onClick={() =>
-                window.open('https://discord.com/invite/564CDre9F3', '_blank')
+                window.open(
+                  'https://discord.com/invite/564CDre9F3',
+                  '_blank',
+                  'noopener,noreferrer',
+                )
               }
             />
           </CustomCardWrapper>
