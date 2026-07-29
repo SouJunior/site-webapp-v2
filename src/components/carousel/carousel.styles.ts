@@ -34,6 +34,10 @@ export const ArrowsContainer = styled.div`
   display: flex;
   justify-content: center;
   gap: 80px;
+
+  @media (max-width: 430px) {
+    display: none;
+  }
 `;
 
 export const ArrowButton = styled.button<{ disabled?: boolean }>`
