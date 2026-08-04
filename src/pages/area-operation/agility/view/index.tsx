@@ -8,6 +8,7 @@ import IconCommunication from '@assets/skills/communication.svg';
 import IconListening from '@assets/skills/listening.svg';
 import IconOrganization from '@assets/skills/organization.svg';
 import IconWatchful from '@assets/skills/watchful-eye.svg';
+import { Link } from 'react-router-dom';
 
 const skillList = [
   {
@@ -59,7 +60,9 @@ const AgilityView = () => {
             muito diálogo, escuta ativa e empatia.
           </Text>
 
-          <Button variant="primary">Faça parte!</Button>
+          <Link to="https://stars.soujunior.tech/">
+            <Button variant="primary">Faça parte!</Button>
+          </Link>
 
           <div aria-live="polite" aria-atomic="true"></div>
         </section>
@@ -155,8 +158,9 @@ const AgilityView = () => {
             carreiras e transformar o futuro de muitos profissionais da área tech."
           descriptionWidth={670}
           descriptionBlockMargin={24}
-          buttonText="Faca parte!"
+          buttonText="Faça parte!"
           buttonVariant="primary"
+          buttonLink="https://stars.soujunior.tech/"
         />
       </div>
     </div>

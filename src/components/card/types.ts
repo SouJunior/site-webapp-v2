@@ -64,6 +64,7 @@ export interface CardProps {
   buttonText?: string;
   buttonVariant?: 'primary' | 'secondary' | 'tertiary' | 'outline';
   onClick?: () => void;
+  buttonLink?: string;
 
   titleFontWeight?: number;
   titleFontFamily?: string;

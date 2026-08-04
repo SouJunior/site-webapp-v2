@@ -9,6 +9,7 @@ import IconTools from '@assets/icon-tools.png';
 import IconData from '@assets/icon-data.png';
 import IconSquare from '@assets/icon-square.svg';
 import IconTarget from '@assets/icon-target.png';
+import { Link } from 'react-router-dom';
 
 const skillList = [
   {
@@ -66,7 +67,9 @@ const BusinessView = () => {
             e aprender sobre modelos de negócio, esse é o seu lugar.
           </Text>
 
-          <Button variant="primary">Faça parte!</Button>
+          <Link to="https://stars.soujunior.tech/">
+            <Button variant="primary">Faça parte!</Button>
+          </Link>
 
           <div aria-live="polite" aria-atomic="true"></div>
         </section>
@@ -177,6 +180,7 @@ const BusinessView = () => {
           descriptionBlockMargin={24}
           buttonText="Faça parte!"
           buttonVariant="primary"
+          buttonLink="https://stars.soujunior.tech/"
         />
       </div>
     </div>

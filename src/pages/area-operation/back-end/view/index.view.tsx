@@ -16,6 +16,7 @@ import PostgreSQL from '@assets/skills/back-end/postgre-sql.svg';
 import ORM from '@assets/skills/back-end/orm-odm.svg';
 import Jest from '@assets/skills/back-end/jest.svg';
 import Docker from '@assets/skills/back-end/docker.svg';
+import { Link } from 'react-router-dom';
 
 const skillList = [
   {
@@ -107,7 +108,9 @@ const BackEndView: React.FC = () => {
             iniciativa.
           </Text>
 
-          <Button variant="primary">Faça parte!</Button>
+          <Link to="https://stars.soujunior.tech/">
+            <Button variant="primary">Faça parte!</Button>
+          </Link>
 
           {/* Placeholder for future content */}
           <div aria-live="polite" aria-atomic="true">
@@ -234,8 +237,9 @@ const BackEndView: React.FC = () => {
       tech."
           descriptionWidth={670}
           descriptionBlockMargin={24}
-          buttonText="Faca parte!"
+          buttonText="Faça parte!"
           buttonVariant="primary"
+          buttonLink="https://stars.soujunior.tech/"
         />
       </div>
     </div>

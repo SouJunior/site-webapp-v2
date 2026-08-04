@@ -14,6 +14,7 @@ import Img4 from '@assets/areas-expertise/design-carousel/img4.png';
 import Card from '@components/card';
 import Button from '@global/button';
 import Carousel from '@components/carousel';
+import { Link } from 'react-router-dom';
 
 const DesignView: React.FC = () => {
   const { announce } = useScreenReaderAnnouncer();
@@ -120,7 +121,9 @@ const DesignView: React.FC = () => {
             etapas e perfis do design.
           </Text>
 
-          <Button variant="primary">Faça parte!</Button>
+          <Link to="https://stars.soujunior.tech/">
+            <Button variant="primary">Faça parte!</Button>
+          </Link>
 
           {/* Placeholder for future content */}
           <div aria-live="polite" aria-atomic="true">
@@ -170,8 +173,9 @@ const DesignView: React.FC = () => {
       tech."
           descriptionWidth={670}
           descriptionBlockMargin={24}
-          buttonText="Faca parte!"
+          buttonText="Faça parte!"
           buttonVariant="primary"
+          buttonLink="https://stars.soujunior.tech/"
         />
       </div>
     </div>
