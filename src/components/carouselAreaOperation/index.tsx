@@ -78,26 +78,13 @@ const CarouselAreaOperation: React.FC<CarouselProps> = ({
     };
   }, [items]);
 
-  const scrollByPage = (direction: 'next' | 'prev') => {
-    const el = wrapperRef.current;
-    if (!el) return;
-
-    const gap = 24;
-    const cardWidth = itemWidth + gap;
-    // Scroll intentionally by exactly 3 cards for an entire new session
-    const scrollAmount =
-      direction === 'next' ? cardWidth * 3 : -(cardWidth * 3);
-
-    el.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-  };
-
   const onKeyDown = (e: React.KeyboardEvent) => {
-    if (e.key === 'ArrowRight' && canScrollNext) {
+    if (e.key === 'ArrowRight') {
       e.preventDefault();
-      scrollByPage('next');
-    } else if (e.key === 'ArrowLeft' && canScrollPrev) {
+      next();
+    } else if (e.key === 'ArrowLeft') {
       e.preventDefault();
-      scrollByPage('prev');
+      prev();
     }
   };
 
@@ -129,7 +116,9 @@ const CarouselAreaOperation: React.FC<CarouselProps> = ({
         {items.map((_, index) => (
           <Dot
             key={index}
-            active={index === currentIndex}
+            $active={index === currentIndex}
+            aria-label={`Ir para o cartão ${index + 1}`}
+            aria-current={index === currentIndex ? 'true' : undefined}
             onClick={() => setCurrentIndex(index)}
           />
         ))}

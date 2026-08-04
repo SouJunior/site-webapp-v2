@@ -4,6 +4,8 @@ export const CardContainer = styled.article`
   display: flex;
   align-items: stretch;
   gap: 32px;
+  flex-shrink: 0;
+  scroll-snap-align: center;
 
   max-width: 1042px;
   width: 100%;
@@ -16,6 +18,11 @@ export const CardContainer = styled.article`
   background: #fff;
 
   box-sizing: border-box;
+
+  &:focus,
+  &:focus-visible {
+    outline: none;
+  }
 
   @media (max-width: 440px) {
     flex-direction: column;
@@ -133,7 +140,7 @@ export const StyledListItem = styled.li`
   leading-trim: NONE;
   line-height: 140%;
   letter-spacing: 0%;
-  color: ##000000;
+  color: #000000;
   margin-bottom: 2px;
 
   &::marker {

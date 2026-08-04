@@ -9,6 +9,14 @@ export const CarouselContainer = styled.div`
   align-items: center;
 
   overflow: hidden;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
 `;
 
 export const CardWrapper = styled.div`
@@ -85,13 +93,13 @@ export const Dots = styled.div`
   }
 `;
 
-export const Dot = styled.button<{ active: boolean }>`
+export const Dot = styled.button<{ $active: boolean }>`
   width: 8px;
   height: 8px;
   border-radius: 50%;
   border: none;
 
-  background: ${({ active }) => (active ? '#338AFF' : '#D9D9D9')};
+  background: ${({ $active }) => ($active ? '#338AFF' : '#D9D9D9')};
 
   cursor: pointer;
 `;
