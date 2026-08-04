@@ -14,7 +14,7 @@ import Img4 from '@assets/areas-expertise/product-carousel/img4.png';
 import Img5 from '@assets/areas-expertise/product-carousel/img5.png';
 import Card from '@components/card';
 import Button from '@global/button';
-import Carousel from '@components/carousel';
+import CarouselAreaOperation from '@components/carouselAreaOperation';
 
 const carouselItems = [
   {
@@ -153,7 +153,7 @@ const ProductView: React.FC = () => {
           Conheça os cargos de Produto que você pode explorar com a gente:
         </Title>
 
-        <Carousel items={carouselItems} />
+        <CarouselAreaOperation items={carouselItems} />
       </section>
 
       <Card
