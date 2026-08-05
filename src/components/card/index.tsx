@@ -7,6 +7,7 @@ import Text from '../.global/text';
 import List from '../.global/list';
 import Button from '../.global/button';
 import Paragraph from '../.global/paragraph';
+import { Link } from 'react-router-dom';
 
 const Card: React.FC<CardProps> = ({
   edgeSection,
@@ -71,6 +72,7 @@ const Card: React.FC<CardProps> = ({
 
   buttonText,
   buttonVariant,
+  buttonLink,
 }) => {
   return (
     <CardContainer
@@ -160,11 +162,16 @@ const Card: React.FC<CardProps> = ({
           </Paragraph>
         )}
 
-        {buttonText && (
-          <Button variant={buttonVariant} onClick={onClick}>
-            {buttonText}
-          </Button>
-        )}
+        {buttonText &&
+          (buttonLink ? (
+            <Link to={buttonLink}>
+              <Button variant={buttonVariant}>{buttonText}</Button>
+            </Link>
+          ) : (
+            <Button variant={buttonVariant} onClick={onClick}>
+              {buttonText}
+            </Button>
+          ))}
       </div>
     </CardContainer>
   );
