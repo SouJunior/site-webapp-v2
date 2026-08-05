@@ -56,7 +56,10 @@ export const ArrowButton = styled.button<{
   top: 50%;
   transform: translateY(-50%);
 
-  ${({ $side }) => ($side === 'left' ? 'left: 200px;' : 'right: 200px;')}
+  ${({ $side }) =>
+    $side === 'left'
+      ? 'left: calc(50% - 521px - 30px);'
+      : 'right: calc(50% - 521px - 30px);'}
 
   width: 16px;
   height: 16px;
