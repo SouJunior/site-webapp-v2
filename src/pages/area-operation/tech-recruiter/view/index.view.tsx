@@ -13,6 +13,7 @@ import Communication from '@assets/skills/communication.svg';
 import Listening from '@assets/skills/listening.svg';
 import Organization from '@assets/skills/organization.svg';
 import WatchfulEye from '@assets/skills/watchful-eye.svg';
+import { Link } from 'react-router-dom';
 
 const skillList = [
   {
@@ -85,7 +86,9 @@ const TechRecruiterView: React.FC = () => {
             acompanha os candidatos em sua jornada até entrarem no time.
           </Text>
 
-          <Button variant="primary">Faça parte!</Button>
+          <Link to="https://stars.soujunior.tech/">
+            <Button variant="primary">Faça parte!</Button>
+          </Link>
 
           {/* Placeholder for future content */}
           <div aria-live="polite" aria-atomic="true">
@@ -188,8 +191,9 @@ const TechRecruiterView: React.FC = () => {
       tech."
           descriptionWidth={670}
           descriptionBlockMargin={24}
-          buttonText="Faca parte!"
+          buttonText="Faça parte!"
           buttonVariant="primary"
+          buttonLink="https://stars.soujunior.tech/"
         />
       </div>
     </div>

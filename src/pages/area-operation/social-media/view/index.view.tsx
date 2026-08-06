@@ -10,6 +10,7 @@ import ImageSocialMedia from '@assets/areas-expertise/social-media.png';
 import ImageSocialMedia2 from '@assets/areas-expertise/social-media2.png';
 import Card from '@components/card';
 import Button from '@global/button';
+import { Link } from 'react-router-dom';
 
 const SocialMediaView: React.FC = () => {
   const { announce } = useScreenReaderAnnouncer();
@@ -61,7 +62,9 @@ const SocialMediaView: React.FC = () => {
             voluntários e gera impacto real.
           </Text>
 
-          <Button variant="primary">Faça parte!</Button>
+          <Link to="https://stars.soujunior.tech/">
+            <Button variant="primary">Faça parte!</Button>
+          </Link>
 
           {/* Placeholder for future content */}
           <div aria-live="polite" aria-atomic="true">
@@ -140,8 +143,9 @@ const SocialMediaView: React.FC = () => {
       tech."
           descriptionWidth={670}
           descriptionBlockMargin={24}
-          buttonText="Faca parte!"
+          buttonText="Faça parte!"
           buttonVariant="primary"
+          buttonLink="https://stars.soujunior.tech/"
         />
       </div>
     </div>

@@ -15,6 +15,7 @@ import Tailwind from '@assets/skills/front-end/tailwind.svg';
 import Figma from '@assets/skills/front-end/figma.svg';
 import Git from '@assets/skills/git.svg';
 import Api from '@assets/skills/front-end/api.svg';
+import { Link } from 'react-router-dom';
 
 const skillList = [
   {
@@ -102,7 +103,9 @@ const FrontEndView: React.FC = () => {
             pode ser o seu lugar.
           </Text>
 
-          <Button variant="primary">Faça parte!</Button>
+          <Link to="https://stars.soujunior.tech/">
+            <Button variant="primary">Faça parte!</Button>
+          </Link>
 
           {/* Placeholder for future content */}
           <div aria-live="polite" aria-atomic="true">
@@ -218,8 +221,9 @@ const FrontEndView: React.FC = () => {
       tech."
           descriptionWidth={670}
           descriptionBlockMargin={24}
-          buttonText="Faca parte!"
+          buttonText="Faça parte!"
           buttonVariant="primary"
+          buttonLink="https://stars.soujunior.tech/"
         />
       </div>
     </div>

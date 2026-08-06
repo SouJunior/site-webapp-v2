@@ -10,6 +10,7 @@ import Data from '@assets/areas-expertise/data.png';
 import Data2 from '@assets/areas-expertise/data2.png';
 import Card from '@components/card';
 import Button from '@global/button';
+import { Link } from 'react-router-dom';
 
 const DataView: React.FC = () => {
   const { announce } = useScreenReaderAnnouncer();
@@ -61,7 +62,9 @@ const DataView: React.FC = () => {
             padrões e contar histórias com dados, este pode ser o seu espaço.
           </Text>
 
-          <Button variant="primary">Faça parte!</Button>
+          <Link to="https://stars.soujunior.tech/">
+            <Button variant="primary">Faça parte!</Button>
+          </Link>
 
           {/* Placeholder for future content */}
           <div aria-live="polite" aria-atomic="true">
@@ -131,8 +134,9 @@ const DataView: React.FC = () => {
       tech."
           descriptionWidth={670}
           descriptionBlockMargin={24}
-          buttonText="Faca parte!"
+          buttonText="Faça parte!"
           buttonVariant="primary"
+          buttonLink="https://stars.soujunior.tech/"
         />
       </div>
     </div>

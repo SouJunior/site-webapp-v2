@@ -10,6 +10,7 @@ import IconDeploy from '@assets/icon-deploy.svg';
 import IconAWS from '@assets/icon-aws.svg';
 import IconLinux from '@assets/icon-linux.svg';
 import IconMonitoring from '@assets/icon-monitoring.svg';
+import { Link } from 'react-router-dom';
 
 const skillList = [
   {
@@ -72,7 +73,9 @@ const DevopsView = () => {
             processos, essa área pode ser a sua.
           </Text>
 
-          <Button variant="primary">Faça parte!</Button>
+          <Link to="https://stars.soujunior.tech/">
+            <Button variant="primary">Faça parte!</Button>
+          </Link>
 
           <div aria-live="polite" aria-atomic="true"></div>
         </section>
@@ -185,6 +188,7 @@ const DevopsView = () => {
           descriptionBlockMargin={24}
           buttonText="Faça parte!"
           buttonVariant="primary"
+          buttonLink="https://stars.soujunior.tech/"
         />
       </div>
     </div>

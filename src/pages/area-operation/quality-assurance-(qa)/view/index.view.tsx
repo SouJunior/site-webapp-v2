@@ -14,6 +14,7 @@ import Communication from '@assets/skills/communication.svg';
 import Documentation from '@assets/skills/qa/documentation.svg';
 import Tests from '@assets/skills/qa/tests.svg';
 import Feedbacks from '@assets/skills/qa/feedbacks.svg';
+import { Link } from 'react-router-dom';
 
 const skillList = [
   {
@@ -99,7 +100,9 @@ const QAView: React.FC = () => {
             processos, QA pode ser a sua área.
           </Text>
 
-          <Button variant="primary">Faça parte!</Button>
+          <Link to="https://stars.soujunior.tech/">
+            <Button variant="primary">Faça parte!</Button>
+          </Link>
 
           {/* Placeholder for future content */}
           <div aria-live="polite" aria-atomic="true">
@@ -222,8 +225,9 @@ const QAView: React.FC = () => {
       tech."
           descriptionWidth={670}
           descriptionBlockMargin={24}
-          buttonText="Faca parte!"
+          buttonText="Faça parte!"
           buttonVariant="primary"
+          buttonLink="https://stars.soujunior.tech/"
         />
       </div>
     </div>
