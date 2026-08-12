@@ -5,16 +5,17 @@ import Title from '../../../components/.global/title';
 import Text from '../../../components/.global/text';
 import Card from '../../../components/card';
 import Carousel from '../../../components/carousel';
-import IconTechRecruiter from '../../../assets/icon-techrecruiter.svg';
-import IconProduct from '../../../assets/icon-produto.svg';
-import IconAgile from '../../../assets/icon-agile.svg';
-import IconSocialMedia from '../../../assets/icon-socialmedia.svg';
-import IconDesigner from '../../../assets/icon-design.svg';
-import IconFront from '../../../assets/icon-front.svg';
-import IconBack from '../../../assets/icon-back.svg';
-import IconData from '../../../assets/icon-data.svg';
-import IconQA from '../../../assets/icon-qa.svg';
-import IconDevOps from '../../../assets/icon-devops.svg';
+import IconBusiness from '../../../assets/icon-business.png';
+import IconTechRecruiter from '../../../assets/icon-techrecruiter.png';
+import IconProduct from '../../../assets/icon-produto.png';
+import IconAgile from '../../../assets/icon-agil.png';
+import IconSocialMedia from '../../../assets/icon-socialmedia.png';
+import IconDesigner from '../../../assets/icon-ui.png';
+import IconFront from '../../../assets/icon-front.png';
+import IconBack from '../../../assets/icon-back.png';
+import IconData from '../../../assets/icon-data2.png';
+import IconQA from '../../../assets/icon-qa.png';
+import IconDevOps from '../../../assets/icon-devops.png';
 import SkillsCarousel from '../../../components/skills.carousel';
 import type { SkillItem } from '../../../components/skills.carousel';
 import type { Item as CarouselNewsEventsItem } from '@components/newsAndEvents.carousel/index';
@@ -80,63 +81,69 @@ import { HOME_TESTIMONIALS } from './testimonialsData';
 const carouselItems: SkillItem[] = [
   {
     id: 1,
-    img: IconAgile,
-    title: 'Agilidade',
-    area: 'agilidade',
+    img: IconBusiness,
+    title: 'Business',
+    area: 'business',
   },
   {
     id: 2,
-    img: IconDesigner,
-    title: 'Design',
-    area: 'design',
+    img: IconTechRecruiter,
+    title: 'Tech Recruiter',
+    area: 'tech-recruiter',
   },
   {
     id: 3,
-    img: IconData,
-    title: 'Dados',
-    area: 'dados',
+    img: IconProduct,
+    title: 'Produto',
+    area: 'produto',
   },
   {
     id: 4,
-    img: IconBack,
-    title: 'Desenvolvimento Backend',
-    area: 'back-end',
+    img: IconAgile,
+    title: 'Ágil',
+    area: 'agilidade',
   },
   {
     id: 5,
-    img: IconFront,
-    title: 'Desenvolvimento Frontend',
-    area: 'front-end',
-  },
-  {
-    id: 6,
     img: IconSocialMedia,
     title: 'Social Media',
     area: 'social-media',
   },
   {
+    id: 6,
+    img: IconDesigner,
+    title: 'UI & UX Designer',
+    area: 'design',
+  },
+  {
     id: 7,
-    img: IconDevOps,
-    title: 'DevOps',
-    area: 'dev-ops',
+    img: IconFront,
+    title: 'Front-end',
+    area: 'front-end',
   },
   {
     id: 8,
-    img: IconProduct,
-    title: 'Produtos',
-    area: 'produtos',
+    img: IconBack,
+    title: 'Back-end',
+    area: 'back-end',
   },
   {
     id: 9,
+    img: IconData,
+    title: 'Dados',
+    area: 'dados',
+  },
+  {
+    id: 10,
     img: IconQA,
     title: 'QA',
     area: 'qa',
   },
   {
-    id: 10,
-    img: IconTechRecruiter,
-    title: 'Tech Recruiter',
-    area: 'tech-recruiter',
+    id: 11,
+    img: IconDevOps,
+    title: 'DevOps',
+    area: 'dev-ops',
   },
 ];
 
