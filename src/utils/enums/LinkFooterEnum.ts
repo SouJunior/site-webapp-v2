@@ -12,5 +12,5 @@ export enum LinkFooterEnum2 {
 }
 
 export enum LinkFooterEnum3 {
-  TAKE_PART = '#',
+  TAKE_PART = 'https://stars.soujunior.tech/',
 }
