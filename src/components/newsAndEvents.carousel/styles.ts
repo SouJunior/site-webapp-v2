@@ -63,8 +63,10 @@ export const TextHoraTag = styled.div`
 `;
 
 export const Title = styled.h3`
-  font-size: 1.25rem;
-  color: #000000;
+  font-size: 20px;
+  color: #1a1a1a;
   text-align: start;
   font-weight: 500;
+  line-height: 160%;
+  fontfamily: 'Funnel Display', sans-serif;
 `;

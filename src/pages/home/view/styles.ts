@@ -35,8 +35,8 @@ export const HomeContainer = styled.div`
 export const HomeContent = styled.main`
   display: flex;
   align-items: center;
-  gap: 150px;
-  width: 1144px;
+  gap: 100px;
+  width: 1147px;
   max-width: 100%;
 
   @media (max-width: 480px) {
@@ -48,7 +48,7 @@ export const HomeContent = styled.main`
 `;
 
 export const HomeTextContent = styled.div`
-  width: 551px;
+  width: 600px;
   display: flex;
   flex-direction: column;
 
@@ -60,23 +60,41 @@ export const HomeTextContent = styled.div`
 `;
 
 export const HomeTitle = styled.h1`
-  color: white;
-  font-size: 40px;
+  color: #ffffff;
+  font-size: 48px;
   line-height: 120%;
   font-weight: 600;
   margin-bottom: 50px;
+  font-family: 'Funnel Display', sans-serif;
 
   @media (max-width: 480px) {
-    font-size: 24px;
+    font-size: 32px;
     margin-bottom: 24px;
   }
 `;
+
 export const HomeText = styled.p`
-  color: white;
-  font-size: 18px;
-  line-height: 140%;
-  font-weight: 400;
+  color: #ffffff;
+  font-size: 20px;
+  line-height: 175%;
+  font-weight: 700;
   margin-bottom: 8px;
+  font-family: 'Funnel Sans', sans-serif;
+
+  @media (max-width: 480px) {
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+`;
+
+export const HomeParagraph = styled.p`
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 157%;
+  font-weight: 500;
+  margin-bottom: 8px;
+  padding-right: 29px;
+  font-family: 'Funnel Sans', sans-serif;
 
   @media (max-width: 480px) {
     font-size: 14px;
@@ -97,15 +115,15 @@ export const HomeMascote = styled.img`
 `;
 
 export const HomeButton = styled.a`
-  width: 127px;
-  height: 40px;
+  width: 153px;
+  height: 59px;
   border-radius: 10px;
-  color: #003986;
+  color: #1e47af;
   background-color: #ffffff;
   border-radius: 8px;
-  color: #003986;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 500;
+  line-height: 175%;
   background-color: white;
   border: none;
   cursor: pointer;
@@ -133,25 +151,26 @@ export const ContainerTestimonialTitle = styled.div`
 `;
 
 export const TestimonialTitle = styled.h2`
-  color: #001633;
-  font-size: 48px;
+  color: #1e47af;
+  font-size: 40px;
   font-weight: 700;
-  line-height: 150%;
+  line-height: 120%;
   text-align: center;
+  font-family: 'Funnel Display', sans-serif;
 
   @media (max-width: 430px) {
-    font-size: 24px;
-    font-weight: 600;
+    font-size: 28px;
   }
 `;
 
 export const TestimonialText = styled.p`
-  color: #001633;
-  font-size: 24px;
-  font-weight: 600;
-  line-height: 1.2;
+  color: #1a1a1a;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 200%;
   text-align: center;
   margin-block: 12px;
+  font-family: 'Funnel Sans', sans-serif;
 
   @media (max-width: 430px) {
     font-size: 16px;
@@ -170,12 +189,13 @@ export const TestimonialColumn = styled.div`
 `;
 
 export const TestimonialCard = styled.article`
-  background-color: ${colorPalette.primaryColor};
+  background-color: #1e47af;
   border-radius: 24px;
   height: 270px;
   width: 354px;
   padding: 1.5rem;
   transition: transform 250ms ease;
+  fontfamily: 'Funnel Sans', sans-serif;
 
   &:hover {
     transform: scale(1.04);
@@ -199,7 +219,7 @@ export const TestimonialAuthor = styled.div`
 
 export const AreasContainer = styled.div`
   padding: 60px 0 40px 0;
-  background-color: #e6e6e6;
+  background-color: #eff4ff;
   display: flex;
   justify-content: center;
   user-select: none;
@@ -225,7 +245,7 @@ export const AreasTextContent = styled.div`
   align-items: center;
   text-align: center;
   gap: 16px;
-  max-width: 920px;
+  max-width: 1260px;
 `;
 
 export const CarouselContainer = styled.div`
@@ -234,26 +254,30 @@ export const CarouselContainer = styled.div`
 `;
 
 export const SectionTitle = styled.h2`
-  color: #003986;
-  font-size: 2.5rem;
+  color: #1e47af;
+  font-size: 40px;
   text-align: center;
-  margin-bottom: 1.25rem;
   margin-top: 0.625rem;
+  font-family: 'Funnel Display', sans-serif;
 
   @media (max-width: 606px) {
-    font-size: 1.5rem;
+    font-size: 28px;
     margin-top: 0.25rem;
   }
 `;
 
 export const SectionText = styled.p`
-  font-size: 1rem;
-  color: #323232;
+  font-size: 20px;
+  color: #1a1a1a;
   text-align: center;
   margin-bottom: 1rem;
+  font-weight: 500;
+  line-height: 200%;
+  font-family: 'Funnel Sans', sans-serif;
 
   @media (max-width: 606px) {
     width: 100%;
+    font-size: 16px;
     text-align: start;
     margin-left: 1rem;
   }
@@ -298,11 +322,13 @@ export const ToothpickPapers = styled.div`
 `;
 
 export const JoinButton = styled.a`
-  width: 121px;
-  height: 44px;
+  width: 146px;
+  height: 59px;
   border-radius: 10px;
-  color: white;
-  background-color: #338aff;
+  font-family: 'Funnel Sans', sans-serif;
+  font-size: 20px;
+  color: #ffffff;
+  background-color: #3c7ef9;
   border: none;
   cursor: pointer;
   display: inline-flex;
@@ -323,7 +349,7 @@ export const SuporterContainer = styled.div`
   justify-content: center;
   user-select: none;
   margin-top: 20px;
-  background-color: #e6e6e6;
+  background-color: #eff4ff;
 
   @media (max-width: 430px) {
     padding: 0 24px 16px 24px;
@@ -340,11 +366,11 @@ export const SuporterContent = styled.div`
 `;
 
 export const SuporterTitle = styled.h2`
-  color: #001633;
-  font-size: 48px;
+  color: #1e47af;
+  font-size: 40px;
   text-align: center;
   margin-top: 1.87rem;
-  line-height: 150%;
+  line-height: 120%;
   font-weight: 700;
 
   @media (max-width: 430px) {
@@ -380,12 +406,13 @@ export const Divider = styled.hr<{ size?: 'sm' }>`
 `;
 
 export const SectionSubtitle = styled.h2`
-  color: #001633;
-  font-size: 1.5rem;
+  color: #1a1a1a;
+  font-size: 20px;
   text-align: center;
   margin-top: 0.625rem;
-  line-height: 120%;
+  line-height: 200%;
   font-weight: 500;
+  font-family: 'Funnel Sans', sans-serif;
 
   @media (max-width: 430px) {
     font-size: 1rem;
@@ -393,22 +420,23 @@ export const SectionSubtitle = styled.h2`
 `;
 
 export const SectionQuestionsTitle = styled.h2`
-  color: #001633;
-  font-size: 3rem;
+  color: #1e47af;
+  font-size: 40px;
   text-align: center;
-  margin-top: 1.87rem;
+  margin-top: 70px;
   line-height: 150%;
   font-weight: 700;
+  font-family: 'Funnel Display', sans-serif;
 
   @media (max-width: 430px) {
-    font-size: 1.5rem;
+    font-size: 28px;
   }
 `;
 
 export const Button = styled.button<ButtonProps>`
   background: transparent;
   border: none;
-  color: #002c66;
+  color: #1e47af;
   max-width: 14.68rem;
   min-height: 2.75rem;
   margin: 0 0.25rem;
@@ -416,16 +444,17 @@ export const Button = styled.button<ButtonProps>`
 
   font-weight: 500;
   font-size: 1rem;
-  line-height: 120%;
-  font-family: 'Radio Canada', sans-serif;
+  line-height: 133%;
+  font-family: 'Funnel Display', sans-serif;
 
   border-bottom: 2px solid
-    ${({ $active }) => ($active ? '#338aff' : 'transparent')};
+    ${({ $active }) => ($active ? '#3C7EF9' : 'transparent')};
 
   @media (max-width: 430px) {
     max-width: 110px;
     min-height: 73px;
     padding: 0.5rem;
+    font-size: 14px;
   }
 `;
 
@@ -450,9 +479,9 @@ export const QuestionsAndAnswersContainer = styled.div`
 export const QuestionsAndAnswers = styled.div<QuestionsAndAnswersProps>`
   display: flex;
   flex-direction: column;
-  max-width: 884px;
+  max-width: 960px;
   padding: 20px 0 10px 10px;
-  border-bottom: 1px solid #dedede;
+  border-bottom: 1px solid #8c8c8c;
   border-radius: ${({ $active }) => ($active ? '0 0 4px 4px' : '0')};
 
   @media (max-width: 430px) {
@@ -464,7 +493,7 @@ export const QuestionContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 884px;
+  width: 960px;
   gap: 12px;
   padding-right: 15px;
 
@@ -474,23 +503,24 @@ export const QuestionContainer = styled.div`
 `;
 
 export const Questions = styled.p`
-  color: #003986;
-  font-size: 1.25rem;
-  line-height: 120%;
+  color: #1a1a1a;
+  font-size: 24px;
+  line-height: 133%;
   font-weight: 500;
   word-break: break-word;
   overflow-wrap: break-word;
+  font-family: 'Funnel Display', sans-serif;
 
   @media (max-width: 430px) {
-    font-size: 1rem;
+    font-size: 20px;
   }
 `;
 
 export const Answers = styled.p`
-  color: #323232;
+  color: #666666;
   font-size: 1rem;
   text-align: start;
-  line-height: 140%;
+  line-height: 150%;
   font-weight: 400;
   margin-top: 0.6rem;
   padding: 0 20px 10px 10px;
@@ -501,14 +531,15 @@ export const Answers = styled.p`
 `;
 
 export const DoubtButton = styled.a`
-  font-size: 1.5rem;
-  color: #001633;
-  font-family: 'Radio Canada', sans-serif;
+  font-size: 20px;
+  color: #3c7ef9;
+  font-family: 'Funnel Display', sans-serif;
   align-items: center;
   justify-content: center;
-  text-decoration: underline;
+  text-decoration: none;
   font-weight: 500;
   line-height: 120%;
+  margin-left: 5px;
 
   @media (max-width: 430px) {
     font-size: 1.25rem;
@@ -516,12 +547,13 @@ export const DoubtButton = styled.a`
 `;
 
 export const ParagraphFAQSection = styled.p`
-  color: #001633;
-  font-size: 1.5rem;
+  color: #1a1a1a;
+  font-size: 20px;
   text-align: center;
   margin-top: 0.625rem;
   line-height: 120%;
   font-weight: 500;
+  font-family: 'Funnel Display', sans-serif;
 
   @media (max-width: 430px) {
     font-size: 1.25rem;
@@ -538,5 +570,20 @@ export const DoubtContainer = styled.div`
   @media (max-width: 430px) {
     margin-left: 10px;
     margin-right: 10px;
+  }
+`;
+
+export const LinkContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 960px;
+  height: 72px;
+  background-color: #eff4ff;
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+
+  @media (max-width: 430px) {
   }
 `;
