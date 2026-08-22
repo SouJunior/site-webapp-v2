@@ -66,7 +66,7 @@ function NewsAndEventsCarousel({ items }: carouselProps) {
               <InfoCard>
                 <Title>{item.title}</Title>
                 <TextInfoCard>
-                  <Text marginBlock={5}>
+                  <Text marginBlock={5} size={16} color="#666666">
                     {new Date(item.date).toLocaleDateString('pt-BR', {
                       day: '2-digit',
                       month: 'long',
@@ -74,10 +74,15 @@ function NewsAndEventsCarousel({ items }: carouselProps) {
                     })}
                   </Text>
                   <TextHoraTag>
-                    <Text marginBlock={0}>
+                    <Text size={14} marginBlock={0}>
                       {`${new Date(item.date).getHours()}h`}
                     </Text>
-                    <Text marginBlock={0} weight={700}>
+                    <Text
+                      size={14}
+                      marginBlock={0}
+                      weight={700}
+                      color="#3C7EF9"
+                    >
                       AO VIVO
                     </Text>
                   </TextHoraTag>

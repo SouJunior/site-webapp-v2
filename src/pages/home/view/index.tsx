@@ -41,6 +41,7 @@ import {
   HomeContainer,
   HomeContent,
   HomeTitle,
+  HomeParagraph,
   HomeTextContent,
   JoinButton,
   TestimonialAuthor,
@@ -68,6 +69,7 @@ import {
   DoubtContainer,
   SectionQuestionsTitle,
   ParagraphFAQSection,
+  LinkContainer,
   SuporterTitle,
   HomeMascote,
   HomeText,
@@ -217,12 +219,12 @@ const HomeView = () => {
               media ao produto:
             </HomeText>
 
-            <HomeText>
+            <HomeParagraph>
               Na SouJunior, você vivencia experiências reais em squads
               multidisciplinares, aprende com mentores experientes e desenvolve
               habilidades em um ambiente voluntário criado para transformar
               juniores em desbravadores do primeiro SIM.
-            </HomeText>
+            </HomeParagraph>
 
             <HomeButton
               href="https://stars.soujunior.tech/"
@@ -249,11 +251,10 @@ const HomeView = () => {
         <Title
           as="h2"
           textAlign="center"
-          color="#003986"
-          size={48}
+          color="#1E47AF"
+          size={40}
           width={510}
           fontWeight={700}
-          marginBottom={12}
           fontFamily="'Funnel Display', sans-serif"
         >
           Sobre a SouJunior
@@ -261,10 +262,9 @@ const HomeView = () => {
 
         <Card
           width={900}
-          marginBlock="0"
           description={
             <>
-              <p style={{ lineHeight: '140%' }}>
+              <p style={{ lineHeight: '150%' }}>
                 O projeto SouJunior, criado em 1º de julho de 2022 por Wouerner
                 Brandão, surgiu da insatisfação com o mercado de tecnologia e da
                 falta de oportunidades para iniciantes.
@@ -272,14 +272,14 @@ const HomeView = () => {
               <p
                 style={{
                   marginBlock: '1rem',
-                  lineHeight: '140%',
+                  lineHeight: '150%',
                 }}
               >
                 Com mais de 120 voluntários, a iniciativa prepara profissionais
                 juniores por meio da prática real, construção de produtos e
                 vivência do dia a dia de uma empresa tech.{' '}
               </p>
-              <p style={{ lineHeight: '140%' }}>
+              <p style={{ lineHeight: '150%' }}>
                 O projeto conta com mentores experientes que lideram os times e
                 oferece um portfólio de produtos para dar visibilidade aos
                 juniores, conectando-os a recrutadores e oportunidades.
@@ -291,17 +291,19 @@ const HomeView = () => {
           }
           descriptionSize={16}
           descriptionWeight={400}
-          descriptionColor="#323232"
+          titleFontFamily="'Funnel Sans', sans-serif"
+          descriptionColor="#1A1A1A"
         />
 
         <Title
           as="h3"
           width={244}
-          color="#001633"
+          color="#1E47AF"
           size={32}
           fontWeight={600}
           marginTop={8}
           marginBottom={36}
+          fontFamily="'Funnel Display', sans-serif"
         >
           Nosso impacto
         </Title>
@@ -324,9 +326,27 @@ const HomeView = () => {
                 textAlign: 'center',
               }}
             >
-              <span style={{ fontSize: '2.25rem', fontWeight: 300 }}>10</span>
+              <span
+                style={{
+                  fontSize: '32px',
+                  fontWeight: 700,
+                  color: '#1E47AF',
+                  fontFamily: "'Funnel Display', sans-serif",
+                }}
+              >
+                10
+              </span>
               <br />
-              <span style={{ fontWeight: 600 }}>Squads Atuantes</span>
+              <span
+                style={{
+                  fontSize: '20px',
+                  fontWeight: 400,
+                  color: '#1A1A1A',
+                  fontFamily: "'Funnel Sans', sans-serif",
+                }}
+              >
+                Squads Atuantes
+              </span>
             </p>{' '}
           </div>
           <Toothpick />
@@ -341,11 +361,27 @@ const HomeView = () => {
                 textAlign: 'center',
               }}
             >
-              <span style={{ fontSize: '2.25rem', fontWeight: 300 }}>
+              <span
+                style={{
+                  fontSize: '32px',
+                  fontWeight: 700,
+                  color: '#1E47AF',
+                  fontFamily: "'Funnel Display', sans-serif",
+                }}
+              >
                 + 100
               </span>
               <br />
-              <span style={{ fontWeight: 600 }}>Voluntários Ativos</span>
+              <span
+                style={{
+                  fontSize: '20px',
+                  fontWeight: 400,
+                  color: '#1A1A1A',
+                  fontFamily: "'Funnel Sans', sans-serif",
+                }}
+              >
+                Voluntários Ativos
+              </span>
             </p>{' '}
           </div>
           <Toothpick />
@@ -355,9 +391,27 @@ const HomeView = () => {
             }}
           >
             <p style={{ fontSize: '1.5rem', textAlign: 'center' }}>
-              <span style={{ fontSize: '2.25rem', fontWeight: 300 }}>+ 30</span>
+              <span
+                style={{
+                  fontSize: '32px',
+                  fontWeight: 700,
+                  color: '#1E47AF',
+                  fontFamily: "'Funnel Display', sans-serif",
+                }}
+              >
+                + 30
+              </span>
               <br />
-              <span style={{ fontWeight: 600 }}>Apoiadores do Projeto</span>
+              <span
+                style={{
+                  fontSize: '20px',
+                  fontWeight: 400,
+                  color: '#1A1A1A',
+                  fontFamily: "'Funnel Sans', sans-serif",
+                }}
+              >
+                Apoiadores do Projeto
+              </span>
             </p>
           </div>
         </div>
@@ -367,7 +421,7 @@ const HomeView = () => {
         <AreasContent>
           <AreasTextContent>
             <Title
-              color="#003986"
+              color="#1E47AF"
               size={40}
               textAlign="center"
               marginBottom={20}
@@ -412,9 +466,9 @@ const HomeView = () => {
                 <Text
                   as="p"
                   color="#FFFFFF"
-                  size={14}
+                  size={16}
                   weight={400}
-                  lineHeight={1.45}
+                  lineHeight={1.5}
                   marginBlock={0}
                 >
                   {t.quote}
@@ -424,8 +478,8 @@ const HomeView = () => {
                 <Avatar src={t.avatarSrc || ''} alt={t.avatarAlt || ''} />
                 <Text
                   as="p"
-                  color="#323232"
-                  size={18}
+                  color="#1A1A1A"
+                  size={20}
                   weight={500}
                   marginBlock={10}
                   textAlign="center"
@@ -434,8 +488,8 @@ const HomeView = () => {
                 </Text>
                 <Text
                   as="p"
-                  color="#323232"
-                  size={14}
+                  color="#666666"
+                  size={16}
                   weight={400}
                   marginBlock={0}
                   textAlign="center"
@@ -466,16 +520,16 @@ const HomeView = () => {
               <PapersContainer>
                 <TextContainer>
                   <Text
-                    size={24}
-                    color="#002C66"
-                    weight={500}
+                    size={28}
+                    color="#1E47AF"
+                    weight={600}
                     textAlign="center"
                   >
                     Júnior
                   </Text>
                   <Text
                     size={16}
-                    color="#000000"
+                    color="#1A1A1A"
                     weight={400}
                     textAlign="center"
                     marginBlock={0}
@@ -488,16 +542,16 @@ const HomeView = () => {
                 <ToothpickPapers />
                 <TextContainer>
                   <Text
-                    size={24}
-                    color="#002C66"
-                    weight={500}
+                    size={28}
+                    color="#1E47AF"
+                    weight={600}
                     textAlign="center"
                   >
                     Mentor
                   </Text>
                   <Text
                     size={16}
-                    color="#000000"
+                    color="#1A1A1A"
                     weight={400}
                     textAlign="center"
                     marginBlock={0}
@@ -509,16 +563,16 @@ const HomeView = () => {
                 <ToothpickPapers />
                 <TextContainer>
                   <Text
-                    size={24}
-                    color="#002C66"
-                    weight={500}
+                    size={28}
+                    color="#1E47AF"
+                    weight={600}
                     textAlign="center"
                   >
                     Head
                   </Text>
                   <Text
                     size={16}
-                    color="#000000"
+                    color="#1A1A1A"
                     weight={400}
                     marginBlock={0}
                     textAlign="center"
@@ -533,7 +587,7 @@ const HomeView = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Participar
+                Participar!
               </JoinButton>
             </div>
           </AreasTextContent>
@@ -557,13 +611,14 @@ const HomeView = () => {
         >
           <Title
             as="h2"
-            color="#001633"
-            size={48}
+            color="#1E47AF"
+            size={40}
             fontWeight={700}
             textAlign="center"
             marginBottom={0}
+            fontFamily="'Funnel Display', sans-serif"
           >
-            Notícias & Eventos
+            Notícias e Eventos
           </Title>
         </div>
 
@@ -577,9 +632,9 @@ const HomeView = () => {
 
             <SuporterTitle>Seja um Apoiador!</SuporterTitle>
             <Text
-              size={16}
-              color="#323232"
-              weight={400}
+              size={20}
+              color="#1A1A1A"
+              weight={500}
               marginBlock={0}
               textAlign="center"
             >
@@ -684,11 +739,18 @@ const HomeView = () => {
             ))}
           </QuestionsAndAnswersContainer>
 
-          <ParagraphFAQSection>Não encontrou a sua dúvida?</ParagraphFAQSection>
-
-          <DoubtButton href="/FAQ" target="_blank" rel="noopener noreferrer">
-            Pergunte aqui!
-          </DoubtButton>
+          <LinkContainer>
+            <ParagraphFAQSection>
+              Não encontrou a sua dúvida?
+              <DoubtButton
+                href="/FAQ"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Pergunte Aqui!
+              </DoubtButton>
+            </ParagraphFAQSection>
+          </LinkContainer>
         </DoubtContainer>
       </section>
     </>

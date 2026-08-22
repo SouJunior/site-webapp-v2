@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react';
 
 export interface TextProps
-  extends React.AllHTMLAttributes<HTMLParagraphElement> {
+  extends Omit<React.AllHTMLAttributes<HTMLParagraphElement>, 'size'> {
   children: ReactNode;
   width?: number;
   color?: string;
@@ -9,6 +9,7 @@ export interface TextProps
   weight?: number;
   lineHeight?: number;
   margin?: number;
+  fontFamily?: string;
   marginBlock?: number;
   marginInline?: number | string;
   textAlign?: 'left' | 'center' | 'right' | 'justify';

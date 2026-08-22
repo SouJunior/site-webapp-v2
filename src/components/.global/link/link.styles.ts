@@ -21,7 +21,7 @@ export const StyledLink = styled.a<
     color ? color : isActive ? '#0056b3' : '#3C7EF9'};
 
   text-decoration: none;
-  cursor: ${({ isFirstLink }) => (isFirstLink ? 'auto' : 'pointer')};
+  cursor: ${({ isFirstLink }) => (isFirstLink ? 'pointer' : 'auto')};
 
   background-color: ${({ isActive }) =>
     isActive ? 'rgba(0,86,179,0.1)' : 'transparent'};

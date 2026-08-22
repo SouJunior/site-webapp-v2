@@ -21,9 +21,9 @@ export const StyledButton = styled.button<ButtonProps>`
     variant === 'outline' &&
     `
       background: transparent;
-      border: 2px solid #003986;
+      border: 2px solid #3C7EF9;
       border-radius: 8px;
-      color: #003986;
+      color: #3C7EF9;
       padding: 0.6rem 1.3rem;
       font-weight: 600;
   `}
