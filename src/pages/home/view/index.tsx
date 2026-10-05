@@ -3,20 +3,7 @@ import ImageMascote from '../../../assets/mascote.png';
 import Avatar from '../../../components/.global/avatar';
 import Title from '../../../components/.global/title';
 import Text from '../../../components/.global/text';
-import Card from '../../../components/card';
 import Carousel from '../../../components/carousel';
-import IconTechRecruiter from '../../../assets/icon-techrecruiter.svg';
-import IconProduct from '../../../assets/icon-produto.svg';
-import IconAgile from '../../../assets/icon-agile.svg';
-import IconSocialMedia from '../../../assets/icon-socialmedia.svg';
-import IconDesigner from '../../../assets/icon-design.svg';
-import IconFront from '../../../assets/icon-front.svg';
-import IconBack from '../../../assets/icon-back.svg';
-import IconData from '../../../assets/icon-data.svg';
-import IconQA from '../../../assets/icon-qa.svg';
-import IconDevOps from '../../../assets/icon-devops.svg';
-import SkillsCarousel from '../../../components/skills.carousel';
-import type { SkillItem } from '../../../components/skills.carousel';
 import type { Item as CarouselNewsEventsItem } from '@components/newsAndEvents.carousel/index';
 import { NewsAndEventsCarousel } from '@components/newsAndEvents.carousel/index';
 import ExperienciaTransformaDia1 from '@assets/news-events/experiencia-que-transforma/dia1.png';
@@ -36,7 +23,6 @@ import {
   AreasContainer,
   AreasContent,
   AreasTextContent,
-  CarouselContainer,
   HomeButton,
   HomeContainer,
   HomeContent,
@@ -47,7 +33,6 @@ import {
   TestimonialAuthor,
   TestimonialCard,
   TestimonialColumn,
-  Toothpick,
   SectionTitle,
   TextContainer,
   SectionText,
@@ -78,69 +63,8 @@ import {
   ContainerTestimonialTitle,
 } from './styles';
 import { HOME_TESTIMONIALS } from './testimonialsData';
-
-const carouselItems: SkillItem[] = [
-  {
-    id: 1,
-    img: IconAgile,
-    title: 'Agilidade',
-    area: 'agilidade',
-  },
-  {
-    id: 2,
-    img: IconDesigner,
-    title: 'Design',
-    area: 'design',
-  },
-  {
-    id: 3,
-    img: IconData,
-    title: 'Dados',
-    area: 'dados',
-  },
-  {
-    id: 4,
-    img: IconBack,
-    title: 'Desenvolvimento Backend',
-    area: 'back-end',
-  },
-  {
-    id: 5,
-    img: IconFront,
-    title: 'Desenvolvimento Frontend',
-    area: 'front-end',
-  },
-  {
-    id: 6,
-    img: IconSocialMedia,
-    title: 'Social Media',
-    area: 'social-media',
-  },
-  {
-    id: 7,
-    img: IconDevOps,
-    title: 'DevOps',
-    area: 'dev-ops',
-  },
-  {
-    id: 8,
-    img: IconProduct,
-    title: 'Produtos',
-    area: 'produtos',
-  },
-  {
-    id: 9,
-    img: IconQA,
-    title: 'QA',
-    area: 'qa',
-  },
-  {
-    id: 10,
-    img: IconTechRecruiter,
-    title: 'Tech Recruiter',
-    area: 'tech-recruiter',
-  },
-];
+import AboutUs from '@components/about-us';
+import Areas from '@components/areas-operation';
 
 const carouselNewsEvents: CarouselNewsEventsItem[] = [
   {
@@ -239,210 +163,8 @@ const HomeView = () => {
         </HomeContent>
       </HomeContainer>
 
-      <section
-        id="sobre-nos"
-        style={{
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'flex-end',
-          paddingTop: '3rem',
-        }}
-      >
-        <Title
-          as="h2"
-          textAlign="center"
-          color="#1E47AF"
-          size={40}
-          width={510}
-          fontWeight={700}
-          fontFamily="'Funnel Display', sans-serif"
-        >
-          Sobre a SouJunior
-        </Title>
-
-        <Card
-          width={900}
-          description={
-            <>
-              <p style={{ lineHeight: '150%' }}>
-                O projeto SouJunior, criado em 1º de julho de 2022 por Wouerner
-                Brandão, surgiu da insatisfação com o mercado de tecnologia e da
-                falta de oportunidades para iniciantes.
-              </p>
-              <p
-                style={{
-                  marginBlock: '1rem',
-                  lineHeight: '150%',
-                }}
-              >
-                Com mais de 120 voluntários, a iniciativa prepara profissionais
-                juniores por meio da prática real, construção de produtos e
-                vivência do dia a dia de uma empresa tech.{' '}
-              </p>
-              <p style={{ lineHeight: '150%' }}>
-                O projeto conta com mentores experientes que lideram os times e
-                oferece um portfólio de produtos para dar visibilidade aos
-                juniores, conectando-os a recrutadores e oportunidades.
-                Participar da SouJunior proporciona experiência prática,
-                networking, mentoria e acesso à primeira oportunidade no
-                mercado.
-              </p>
-            </>
-          }
-          descriptionSize={16}
-          descriptionWeight={400}
-          titleFontFamily="'Funnel Sans', sans-serif"
-          descriptionColor="#1A1A1A"
-        />
-
-        <Title
-          as="h3"
-          width={244}
-          color="#1E47AF"
-          size={32}
-          fontWeight={600}
-          marginTop={8}
-          marginBottom={36}
-          fontFamily="'Funnel Display', sans-serif"
-        >
-          Nosso impacto
-        </Title>
-
-        <div
-          style={{
-            display: 'flex',
-            justifyContent: 'center',
-            marginBottom: '4rem',
-          }}
-        >
-          <div
-            style={{
-              maxWidth: '309px',
-            }}
-          >
-            <p
-              style={{
-                fontSize: '1.5rem',
-                textAlign: 'center',
-              }}
-            >
-              <span
-                style={{
-                  fontSize: '32px',
-                  fontWeight: 700,
-                  color: '#1E47AF',
-                  fontFamily: "'Funnel Display', sans-serif",
-                }}
-              >
-                10
-              </span>
-              <br />
-              <span
-                style={{
-                  fontSize: '20px',
-                  fontWeight: 400,
-                  color: '#1A1A1A',
-                  fontFamily: "'Funnel Sans', sans-serif",
-                }}
-              >
-                Squads Atuantes
-              </span>
-            </p>{' '}
-          </div>
-          <Toothpick />
-          <div
-            style={{
-              maxWidth: '309px',
-            }}
-          >
-            <p
-              style={{
-                fontSize: '1.5rem',
-                textAlign: 'center',
-              }}
-            >
-              <span
-                style={{
-                  fontSize: '32px',
-                  fontWeight: 700,
-                  color: '#1E47AF',
-                  fontFamily: "'Funnel Display', sans-serif",
-                }}
-              >
-                + 100
-              </span>
-              <br />
-              <span
-                style={{
-                  fontSize: '20px',
-                  fontWeight: 400,
-                  color: '#1A1A1A',
-                  fontFamily: "'Funnel Sans', sans-serif",
-                }}
-              >
-                Voluntários Ativos
-              </span>
-            </p>{' '}
-          </div>
-          <Toothpick />
-          <div
-            style={{
-              maxWidth: '309px',
-            }}
-          >
-            <p style={{ fontSize: '1.5rem', textAlign: 'center' }}>
-              <span
-                style={{
-                  fontSize: '32px',
-                  fontWeight: 700,
-                  color: '#1E47AF',
-                  fontFamily: "'Funnel Display', sans-serif",
-                }}
-              >
-                + 30
-              </span>
-              <br />
-              <span
-                style={{
-                  fontSize: '20px',
-                  fontWeight: 400,
-                  color: '#1A1A1A',
-                  fontFamily: "'Funnel Sans', sans-serif",
-                }}
-              >
-                Apoiadores do Projeto
-              </span>
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <AreasContainer>
-        <AreasContent>
-          <AreasTextContent>
-            <Title
-              color="#1E47AF"
-              size={40}
-              textAlign="center"
-              marginBottom={20}
-              fontFamily="'Funnel Display', sans-serif"
-            >
-              Áreas de atuação
-            </Title>
-            <Text size={16} color="#323232" weight={400} marginBlock={0}>
-              Aqui na SouJunior, atuam profissionais iniciantes das diversas
-              áreas que compõem uma empresa de tecnologia.
-            </Text>
-            <Text size={16} color="#323232" weight={400} marginBlock={0}>
-              Confira abaixo as áreas de atuação que temos em nosso quadro
-              atualmente:
-            </Text>
-          </AreasTextContent>
-          <CarouselContainer>
-            <SkillsCarousel items={carouselItems} />
-          </CarouselContainer>
-        </AreasContent>
-      </AreasContainer>
+      <AboutUs />
+      <Areas />
 
       <section
         id="depoimentos"

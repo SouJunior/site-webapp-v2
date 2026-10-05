@@ -29,10 +29,7 @@ export interface CarouselProps {
   itemWidth?: number;
 }
 
-const CarouselAreaOperation: React.FC<CarouselProps> = ({
-  items,
-  itemWidth = 354,
-}) => {
+const CarouselAreaOperation: React.FC<CarouselProps> = ({ items }) => {
   const wrapperRef = useRef<HTMLDivElement | null>(null);
   const [canScrollPrev, setCanScrollPrev] = useState(false);
   const [canScrollNext, setCanScrollNext] = useState(true);
