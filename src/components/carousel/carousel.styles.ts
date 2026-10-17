@@ -35,7 +35,7 @@ export const ArrowsContainer = styled.div`
   justify-content: center;
   gap: 80px;
 
-  @media (max-width: 430px) {
+  @media (max-width: 431px) {
     display: none;
   }
 `;
@@ -51,6 +51,10 @@ export const ArrowButton = styled.button<{ disabled?: boolean }>`
   svg {
     width: 50px;
     height: 50px;
-    stroke: ${(props) => (props.disabled ? '#9CA3AF' : '#001633')};
+    stroke: ${(props) => (props.disabled ? '#ACACAC' : '#1E47AF')};
+  }
+
+  @media (max-width: 431px) {
+    display: none;
   }
 `;
