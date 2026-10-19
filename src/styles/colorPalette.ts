@@ -12,4 +12,5 @@ export const colorPalette = {
   lightColor: '#E7E8EA',
   darkColor: '#343a40',
   neutralColor: '#242731',
+  backgroundColor: '#FFFFFF',
 };

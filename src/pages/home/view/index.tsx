@@ -1,18 +1,18 @@
 import { useRef, useEffect, useState } from 'react';
 import ImageMascote from '../../../assets/mascote.png';
 import Avatar from '../../../components/.global/avatar';
-import Title from '../../../components/.global/title';
 import Text from '../../../components/.global/text';
 import Carousel from '../../../components/carousel';
 import type { Item as CarouselNewsEventsItem } from '@components/newsAndEvents.carousel/index';
-import { NewsAndEventsCarousel } from '@components/newsAndEvents.carousel/index';
 import ExperienciaTransformaDia1 from '@assets/news-events/experiencia-que-transforma/dia1.png';
 import ExperienciaTransformaDia2 from '@assets/news-events/experiencia-que-transforma/dia2.png';
 import ExperienciaTransformaDia3 from '@assets/news-events/experiencia-que-transforma/dia3.png';
 import ExperienciaTransformaDia4 from '@assets/news-events/experiencia-que-transforma/dia4.png';
+import NewsAndEvents from '@components/news-and-events';
 import IconSuporter from '@assets/icon-suporter.svg';
-import BtnSuporter from '@assets/btn-suporter.png';
+import BtnSuporter from '@assets/mascote.svg';
 import Arrow from '../../../assets/arrow.svg';
+import IconHeart from '../../../assets/icon-heart.svg';
 
 import {
   QUESTIONS_AND_ANSWERS,
@@ -66,57 +66,27 @@ import { HOME_TESTIMONIALS } from './testimonialsData';
 import AboutUs from '@components/about-us';
 import Areas from '@components/areas-operation';
 
-const carouselNewsEvents: CarouselNewsEventsItem[] = [
-  {
-    img: ExperienciaTransformaDia1,
-    title: 'SouJunior 3.0: A Experiência que Transforma',
-    date: new Date('2025-08-04T19:00:00'),
-    link: 'https://www.youtube.com/live/HxXPHNXX-T0?si=a22E8gmXUcC1w68L',
-  },
-  {
-    img: ExperienciaTransformaDia2,
-    title: 'SouJunior 3.0: A Experiência que Transforma',
-    date: new Date('2025-08-05T19:00:00'),
-    link: 'https://www.youtube.com/live/YI_QhYYB2a8?si=3BWJS7HWWqg9-60u',
-  },
-  {
-    img: ExperienciaTransformaDia3,
-    title: 'SouJunior 3.0: A Experiência que Transforma',
-    date: new Date('2025-08-06T19:00:00'),
-    link: 'https://www.youtube.com/live/tJ3DJvRlL-Q?si=Sqqar6h8vy5cn8Wm',
-  },
-  {
-    img: ExperienciaTransformaDia4,
-    title: 'SouJunior 3.0: A Experiência que Transforma',
-    date: new Date('2025-08-07T19:00:00'),
-    link: 'https://www.youtube.com/live/hdbOPmegXnA?si=GeR21viRfbo1on_I',
-  },
-];
-
 const HomeView = () => {
-  const supporterSentinelRef = useRef<HTMLDivElement>(null);
-  const hasPassedRef = useRef(false);
+  const supporterSectionRef = useRef<HTMLDivElement>(null);
   const [stop, setStop] = useState(false);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          hasPassedRef.current = true;
-          setStop(true);
-        } else if (hasPassedRef.current && entry.boundingClientRect.top > 0) {
-          hasPassedRef.current = false;
-          setStop(false);
-        }
-      },
-      { root: null, threshold: 0 },
-    );
+    const updateFloatingButton = () => {
+      const section = supporterSectionRef.current;
+      if (!section) return;
+      const rect = section.getBoundingClientRect();
+      setStop(rect.bottom <= window.innerHeight);
+    };
 
-    if (supporterSentinelRef.current) {
-      observer.observe(supporterSentinelRef.current);
-    }
+    window.addEventListener('scroll', updateFloatingButton);
+    window.addEventListener('resize', updateFloatingButton);
 
-    return () => observer.disconnect();
+    updateFloatingButton();
+
+    return () => {
+      window.removeEventListener('scroll', updateFloatingButton);
+      window.removeEventListener('resize', updateFloatingButton);
+    };
   }, []);
 
   const [questionTypes, setQuestionTypes] =
@@ -316,39 +286,10 @@ const HomeView = () => {
         </AreasContent>
       </AreasContainer>
 
-      <section
-        id="noticias-eventos"
-        aria-label="Notícias & Eventos"
-        style={{
-          margin: 'auto',
-          maxWidth: '1000px',
-        }}
-      >
-        <div
-          style={{
-            textAlign: 'center',
-            marginBottom: '2rem',
-            marginTop: '2rem',
-          }}
-        >
-          <Title
-            as="h2"
-            color="#1E47AF"
-            size={40}
-            fontWeight={700}
-            textAlign="center"
-            marginBottom={0}
-            fontFamily="'Funnel Display', sans-serif"
-          >
-            Notícias e Eventos
-          </Title>
-        </div>
-
-        <NewsAndEventsCarousel items={carouselNewsEvents} />
-      </section>
+      <NewsAndEvents />
 
       <div style={{ position: 'relative' }}>
-        <SuporterContainer id="seja-um-apoiador">
+        <SuporterContainer id="seja-um-apoiador" ref={supporterSectionRef}>
           <SuporterContent>
             <Divider />
 
@@ -382,10 +323,15 @@ const HomeView = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src={BtnSuporter} alt="Seja um apoiador" />
+            <img
+              className="supporter-icon"
+              src={BtnSuporter}
+              alt="Seja um apoiador"
+            />
+            <p>Seja um Apoiador</p>
+            <img src={IconHeart} alt="Coração" />
           </FloatingButton>
         </SuporterContainer>
-        <div ref={supporterSentinelRef} style={{ height: 0 }} />
       </div>
 
       <section>

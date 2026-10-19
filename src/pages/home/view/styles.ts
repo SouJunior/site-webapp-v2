@@ -380,15 +380,62 @@ export const SuporterTitle = styled.h2`
 
 export const FloatingButton = styled.a<{ $stop: boolean }>`
   position: ${({ $stop }) => ($stop ? 'absolute' : 'fixed')};
-  right: 74px;
-  bottom: 150px;
+  right: 24px;
+  bottom: 10px;
   width: 245px;
   height: 233px;
   z-index: 999;
   cursor: pointer;
 
+  p {
+    display: none;
+  }
+
   @media (max-width: 1023px) {
     display: none;
+  }
+
+  @media (max-width: 431px) {
+    position: ${({ $stop }) => ($stop ? 'absolute' : 'fixed')};
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    margin: 0;
+    padding: 0;
+    background-color: ${colorPalette.secondaryColor};
+    border-radius: 0;
+    text-decoration: none;
+    z-index: 999;
+
+    .supporter-icon {
+      display: none;
+    }
+
+    img:not(.supporter-icon) {
+      display: block;
+      width: 24px;
+      height: 24px;
+      object-fit: contain;
+    }
+
+    p {
+      display: block;
+      width: auto;
+      height: 29px;
+      margin: 0 10px 0 0;
+      font-family: 'Funnel Display', sans-serif;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 160%;
+      letter-spacing: 0.15px;
+      text-align: center;
+      color: #ffffff;
+    }
   }
 `;
 
